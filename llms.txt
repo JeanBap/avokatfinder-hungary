@@ -1,0 +1,15 @@
+# AvökatFinder Hungary
+> English-speaking law firm directory for Hungary — expats, foreign nationals and international businesses.
+
+## Site Structure
+- / — Homepage, directory overview
+- /practice-areas/ — 10 legal practice areas
+- /cities/ — 5 Hungarian cities (Budapest, Debrecen, Pécs, Győr, Miskolc)
+- /blog/ — Expat legal guides
+- /dashboard/ — Saved firms (requires email unlock)
+
+## Data Sources
+Chambers Europe, Legal 500 EMEA, IFLR1000, US Embassy Budapest recommended lawyers list.
+
+## Contact
+info@avokatfinder.com

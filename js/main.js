@@ -89,7 +89,7 @@ function lockContacts() {
     linksDiv.classList.add('firm-contacts-locked');
     const lo = document.createElement('div');
     lo.className = 'lock-overlay';
-    lo.innerHTML = `<button class="lock-btn">🔒 Show contact details</button>`;
+    lo.innerHTML = `<button class="lock-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:5px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Show contact details</button>`;
     lo.querySelector('.lock-btn').addEventListener('click', e => {
       e.stopPropagation();
       if (isUnlocked()) { revealAllContacts(); }
@@ -114,7 +114,7 @@ async function loadReviews(firmSlug, container) {
   const list = container.querySelector('.reviews-list');
   const summary = container.querySelector('.reviews-summary');
   if (!Array.isArray(data) || data.length === 0) {
-    list.innerHTML = '<p class="reviews-empty">No reviews yet — be the first.</p>';
+    list.innerHTML = '';
     return;
   }
   const avg = (data.reduce((s, r) => s + r.rating, 0) / data.length).toFixed(1);
@@ -135,11 +135,9 @@ function buildReviewWidget(firmSlug) {
   const div = document.createElement('div');
   div.className = 'reviews-widget';
   div.innerHTML = `
-    <h4 class="reviews-heading">⭐ Client Reviews</h4>
     <div class="reviews-summary"></div>
     <div class="reviews-list"><p class="reviews-empty">Loading…</p></div>
     <div class="review-form-wrap">
-      <h5>Leave a Review</h5>
       <div class="star-picker">${starsHtml(0, true)}</div>
       <input type="hidden" class="rating-val" value="0">
       <input class="review-name-input" type="text" placeholder="Your name (optional)" maxlength="60">
@@ -248,6 +246,44 @@ async function loadDashboard() {
   });
 }
 
+// ── Filter ─────────────────────────────────────────────────────────────────────
+function initFilter() {
+  const btns = document.querySelectorAll('.filter-btn');
+  if (!btns.length) return;
+  // Ensure empty-state element exists
+  let emptyState = document.getElementById('filter-empty-state');
+  if (!emptyState) {
+    const grid = document.querySelector('.firms-grid');
+    if (grid) {
+      emptyState = document.createElement('div');
+      emptyState.id = 'filter-empty-state';
+      emptyState.style.cssText = 'display:none;grid-column:1/-1;text-align:center;padding:48px 24px;';
+      emptyState.innerHTML = '<div style="font-size:2.5rem;margin-bottom:12px">🔍</div><h3 style="margin-bottom:8px">No firms match this filter</h3><p style="color:#6b7280;margin-bottom:20px">Try a different practice area or use the lawyer wizard for personalised matches.</p><a href="/find-a-lawyer/" class="btn btn-primary">Use the Lawyer Wizard</a>';
+      grid.appendChild(emptyState);
+    }
+  }
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const area = btn.dataset.area;
+      let visible = 0;
+      document.querySelectorAll('.firm-card').forEach(card => {
+        if (area === 'all') {
+          card.style.display = '';
+          visible++;
+        } else {
+          const areas = (card.dataset.areas || '').split(',');
+          const show = areas.includes(area);
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        }
+      });
+      if (emptyState) emptyState.style.display = visible === 0 ? '' : 'none';
+    });
+  });
+}
+
 // ── Init ───────────────────────────────────────────────────────────────────────
 (function init() {
   // Mobile nav
@@ -292,6 +328,9 @@ async function loadDashboard() {
     card.appendChild(widget);
     loadReviews(slug, widget);
   });
+
+  // Filter bar
+  initFilter();
 
   // Dashboard
   loadDashboard();

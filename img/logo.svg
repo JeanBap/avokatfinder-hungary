@@ -1,0 +1,78 @@
+<svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AvökatFinder — bridge and scales of justice">
+  <g fill="none" stroke="#0D1F3C" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- ── MAIN ARCH ─────────────────────────────── -->
+    <path d="M 90 220 C 90 220 180 42 400 30 C 620 42 710 220 710 220"
+          stroke-width="18" fill="none"/>
+
+    <!-- ── BRIDGE DECK ────────────────────────────── -->
+    <line x1="90"  y1="220" x2="710" y2="220" stroke-width="12"/>
+
+    <!-- ── VERTICAL HANGERS (arch → deck) ──────────
+         Arch parabola: y = 30 + (x-400)²/k,  k = (400-90)²/190 ≈ 505.6
+         x=170 → y≈67   x=255 → y≈85   x=340 → y≈115
+         x=400 → y=30   (symmetric right side)                       -->
+    <line x1="170" y1="67"  x2="170" y2="220" stroke-width="8"/>
+    <line x1="255" y1="84"  x2="255" y2="220" stroke-width="8"/>
+    <line x1="340" y1="114" x2="340" y2="220" stroke-width="8"/>
+    <line x1="400" y1="30"  x2="400" y2="220" stroke-width="8"/>
+    <line x1="460" y1="114" x2="460" y2="220" stroke-width="8"/>
+    <line x1="545" y1="84"  x2="545" y2="220" stroke-width="8"/>
+    <line x1="630" y1="67"  x2="630" y2="220" stroke-width="8"/>
+
+    <!-- ── TRUSS DIAGONALS ───────────────────────── -->
+    <!-- Left half -->
+    <line x1="90"  y1="220" x2="170" y2="67"  stroke-width="7"/>
+    <line x1="170" y1="220" x2="255" y2="67"  stroke-width="7"/>
+    <line x1="255" y1="220" x2="170" y2="84"  stroke-width="7"/>
+    <line x1="255" y1="220" x2="340" y2="84"  stroke-width="7"/>
+    <line x1="340" y1="220" x2="255" y2="114" stroke-width="7"/>
+    <line x1="340" y1="220" x2="400" y2="114" stroke-width="7"/>
+    <line x1="400" y1="220" x2="340" y2="114" stroke-width="7"/>
+    <!-- Right half (mirror) -->
+    <line x1="710" y1="220" x2="630" y2="67"  stroke-width="7"/>
+    <line x1="630" y1="220" x2="545" y2="67"  stroke-width="7"/>
+    <line x1="545" y1="220" x2="630" y2="84"  stroke-width="7"/>
+    <line x1="545" y1="220" x2="460" y2="84"  stroke-width="7"/>
+    <line x1="460" y1="220" x2="545" y2="114" stroke-width="7"/>
+    <line x1="460" y1="220" x2="400" y2="114" stroke-width="7"/>
+    <line x1="400" y1="220" x2="460" y2="114" stroke-width="7"/>
+
+    <!-- ══ LEFT SCALE OF JUSTICE ══════════════════ -->
+    <!-- Post below deck -->
+    <line x1="90" y1="220" x2="90" y2="270" stroke-width="10"/>
+    <!-- Pivot cap -->
+    <circle cx="90" cy="262" r="6" fill="#0D1F3C" stroke="none"/>
+    <!-- Balance arm -->
+    <line x1="34" y1="262" x2="146" y2="262" stroke-width="8"/>
+    <!-- Left pan suspension lines -->
+    <line x1="38"  y1="262" x2="24"  y2="298" stroke-width="5"/>
+    <line x1="50"  y1="262" x2="36"  y2="298" stroke-width="5"/>
+    <!-- Left pan (bowl arc) -->
+    <path d="M 18 298 Q 30 316 48 298" stroke-width="6" fill="none"/>
+    <!-- Right pan suspension lines -->
+    <line x1="130" y1="262" x2="144" y2="298" stroke-width="5"/>
+    <line x1="142" y1="262" x2="156" y2="298" stroke-width="5"/>
+    <!-- Right pan (bowl arc) -->
+    <path d="M 138 298 Q 150 316 168 298" stroke-width="6" fill="none"/>
+
+    <!-- ══ RIGHT SCALE OF JUSTICE (mirror) ════════ -->
+    <!-- Post below deck -->
+    <line x1="710" y1="220" x2="710" y2="270" stroke-width="10"/>
+    <!-- Pivot cap -->
+    <circle cx="710" cy="262" r="6" fill="#0D1F3C" stroke="none"/>
+    <!-- Balance arm -->
+    <line x1="654" y1="262" x2="766" y2="262" stroke-width="8"/>
+    <!-- Left pan suspension lines -->
+    <line x1="658" y1="262" x2="644" y2="298" stroke-width="5"/>
+    <line x1="670" y1="262" x2="656" y2="298" stroke-width="5"/>
+    <!-- Left pan (bowl arc) -->
+    <path d="M 638 298 Q 650 316 668 298" stroke-width="6" fill="none"/>
+    <!-- Right pan suspension lines -->
+    <line x1="750" y1="262" x2="764" y2="298" stroke-width="5"/>
+    <line x1="762" y1="262" x2="776" y2="298" stroke-width="5"/>
+    <!-- Right pan (bowl arc) -->
+    <path d="M 758 298 Q 770 316 788 298" stroke-width="6" fill="none"/>
+
+  </g>
+</svg>

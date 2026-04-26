@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /dashboard/
-Sitemap: https://avokatfinder.com/sitemap.xml
+Sitemap: https://hungary.avokatfinder.com/sitemap.xml

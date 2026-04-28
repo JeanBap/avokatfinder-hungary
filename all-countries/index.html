@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Countries &#8212; English-Speaking Lawyers in Europe | Av&#246;katFinder</title>
+<meta name="description" content="Find English-speaking lawyers across 41 European countries. 2276+ verified law firms in 414+ cities &#8212; all offering English-language legal services to expats and foreign nationals.">
+<link rel="canonical" href="https://avokatfinder.com/all-countries/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="All Countries &#8212; Av&#246;katFinder">
+<meta property="og:description" content="2276+ English-speaking law firms across 41 European countries.">
+<meta property="og:url" content="https://avokatfinder.com/all-countries/">
+<meta property="og:image" content="https://avokatfinder.com/og/all-countries.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"All Countries — AvökatFinder","url":"https://avokatfinder.com/all-countries/","description":"Directory of English-speaking law firms across 41 European countries."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--dark:#0a1628;--gold:#c9a84c;--white:#fff;--off:#f8f9fa;--border:#e2e8f0;--text:#1e293b;--muted:#64748b;--accent:#1a3a6e}
+body{font-family:"Source Sans 3",sans-serif;color:var(--text);background:var(--off);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.site-nav{background:var(--dark);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.nav-logo{color:#fff;font-family:"Playfair Display",serif;font-size:1.2rem;font-weight:700}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:20px}
+.nav-links a{color:rgba(255,255,255,.75);font-size:.9rem;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.hero{background:linear-gradient(135deg,var(--dark) 0%,#1a2f52 100%);padding:clamp(3rem,8vw,5.5rem) 24px;text-align:center;color:#fff}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(1.9rem,5vw,3rem);font-weight:700;line-height:1.2;margin-bottom:.75rem}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:1.05rem;color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 2rem}
+.stats{display:flex;justify-content:center;gap:clamp(12px,4vw,48px);flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding-top:1.75rem}
+.stat .n{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;font-family:"Playfair Display",serif;color:var(--gold)}
+.stat .l{font-size:.8rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+.search-section{padding:1.75rem 24px .5rem;max-width:560px;margin:0 auto;position:relative}
+.search-section input{width:100%;padding:13px 20px 13px 46px;border-radius:50px;border:1px solid var(--border);background:var(--white);font-size:1rem;font-family:inherit;outline:none;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.search-section input:focus{border-color:#93c5fd;box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+.si{position:absolute;left:38px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.search-count{text-align:center;color:var(--muted);font-size:.88rem;margin-bottom:.5rem}
+.section{padding:clamp(1.5rem,4vw,3rem) 24px}
+.grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.country-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.country-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.1);transform:translateY(-2px)}
+.country-card.hidden{display:none}
+.card-inner{display:block;padding:18px 18px 0}
+.card-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.flag{font-size:2rem;line-height:1;flex-shrink:0}
+.card-info h2{font-size:1.05rem;font-weight:700;font-family:"Playfair Display",serif;color:var(--dark);margin-bottom:5px}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.badge-firms{background:var(--dark);color:#fff;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:20px}
+.badge-cities{background:var(--off);color:var(--muted);font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid var(--border)}
+.arrow{margin-left:auto;color:var(--gold);font-size:1.2rem;opacity:.65;transition:opacity .2s,transform .2s;flex-shrink:0}
+.country-card:hover .arrow{opacity:1;transform:translateX(3px)}
+.city-row{padding:0 0 14px;display:flex;flex-wrap:wrap;gap:5px}
+.city-pill{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--border);border-radius:20px;padding:2px 9px;font-size:.72rem}
+.city-name{color:var(--text)}
+.city-count{background:var(--accent);color:#fff;border-radius:20px;padding:1px 6px;font-size:.65rem;font-weight:700}
+.city-more{color:var(--muted);border-style:dashed}
+.site-footer{background:var(--dark);color:rgba(255,255,255,.55);text-align:center;padding:28px 24px;font-size:.85rem}
+.site-footer a{color:rgba(255,255,255,.75)}
+.site-footer a:hover{color:#fff}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.stats{gap:16px}}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="https://avokatfinder.com/" class="nav-logo">Av<span>&#246;</span>katFinder</a>
+  <div class="nav-links">
+    <a href="https://avokatfinder.com/all-countries/">All Countries</a>
+    <a href="https://germany.avokatfinder.com/find-a-lawyer/">Find a Lawyer</a>
+  </div>
+</nav>
+<div class="hero">
+  <h1>English-Speaking Lawyers Across<br><span>41 European Countries</span></h1>
+  <p>The largest verified directory of English-speaking law firms for expats and foreign nationals in Europe.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">2276+</div><div class="l">Verified law firms</div></div>
+    <div class="stat"><div class="n">414+</div><div class="l">Cities covered</div></div>
+    <div class="stat"><div class="n">41</div><div class="l">Countries</div></div>
+    <div class="stat"><div class="n">Free</div><div class="l">To find a lawyer</div></div>
+  </div>
+</div>
+<div class="search-section">
+  <svg class="si" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+  <input type="text" id="q" placeholder="Search countries&#8230;" autocomplete="off">
+</div>
+<p class="search-count" id="sc">Showing all 41 countries</p>
+<section class="section">
+  <div class="grid" id="grid">
+<div class="country-card" data-name="germany" data-count="111">
+  <a href="https://germany.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇩🇪</span>
+      <div class="card-info">
+        <h2>Germany</h2>
+        <div class="badges">
+          <span class="badge-firms">111 firms</span>
+          <span class="badge-cities">24 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Hamburg</span><span class="city-count">15</span></span><span class="city-pill"><span class="city-name">Munich</span><span class="city-count">14</span></span><span class="city-pill"><span class="city-name">Frankfurt</span><span class="city-count">13</span></span><span class="city-pill"><span class="city-name">Cologne</span><span class="city-count">10</span></span><span class="city-pill"><span class="city-name">Berlin</span><span class="city-count">8</span></span><span class="city-pill"><span class="city-name">Düsseldorf</span><span class="city-count">5</span></span><span class="city-pill city-more">+18 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="france" data-count="77">
+  <a href="https://france.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇫🇷</span>
+      <div class="card-info">
+        <h2>France</h2>
+        <div class="badges">
+          <span class="badge-firms">77 firms</span>
+          <span class="badge-cities">19 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Marseille</span><span class="city-count">7</span></span><span class="city-pill"><span class="city-name">Lyon</span><span class="city-count">6</span></span><span class="city-pill"><span class="city-name">Nice</span><span class="city-count">6</span></span><span class="city-pill"><span class="city-name">Bordeaux</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Toulouse</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Strasbourg</span><span class="city-count">5</span></span><span class="city-pill city-more">+13 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="spain" data-count="110">
+  <a href="https://spain.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇪🇸</span>
+      <div class="card-info">
+        <h2>Spain</h2>
+        <div class="badges">
+          <span class="badge-firms">110 firms</span>
+          <span class="badge-cities">31 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Madrid</span><span class="city-count">41</span></span><span class="city-pill"><span class="city-name">Barcelona</span><span class="city-count">20</span></span><span class="city-pill"><span class="city-name">Marbella</span><span class="city-count">8</span></span><span class="city-pill"><span class="city-name">Valencia</span><span class="city-count">7</span></span><span class="city-pill"><span class="city-name">Seville</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Murcia</span><span class="city-count">3</span></span><span class="city-pill city-more">+25 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="italy" data-count="134">
+  <a href="https://italy.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇮🇹</span>
+      <div class="card-info">
+        <h2>Italy</h2>
+        <div class="badges">
+          <span class="badge-firms">134 firms</span>
+          <span class="badge-cities">32 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Milan</span><span class="city-count">41</span></span><span class="city-pill"><span class="city-name">Rome</span><span class="city-count">26</span></span><span class="city-pill"><span class="city-name">Florence</span><span class="city-count">10</span></span><span class="city-pill"><span class="city-name">Venice</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Naples</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Turin</span><span class="city-count">3</span></span><span class="city-pill city-more">+26 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="netherlands" data-count="62">
+  <a href="https://netherlands.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇳🇱</span>
+      <div class="card-info">
+        <h2>Netherlands</h2>
+        <div class="badges">
+          <span class="badge-firms">62 firms</span>
+          <span class="badge-cities">13 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Amsterdam</span><span class="city-count">37</span></span><span class="city-pill"><span class="city-name">The Hague</span><span class="city-count">6</span></span><span class="city-pill"><span class="city-name">Rotterdam</span><span class="city-count">6</span></span><span class="city-pill"><span class="city-name">Utrecht</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Groningen</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Eindhoven</span><span class="city-count">1</span></span><span class="city-pill city-more">+7 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="czech republic" data-count="67">
+  <a href="https://czech-republic.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇨🇿</span>
+      <div class="card-info">
+        <h2>Czech Republic</h2>
+        <div class="badges">
+          <span class="badge-firms">67 firms</span>
+          <span class="badge-cities">10 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Prague</span><span class="city-count">42</span></span><span class="city-pill"><span class="city-name">Brno</span><span class="city-count">7</span></span><span class="city-pill"><span class="city-name">Ostrava</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Plzen</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Liberec</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Olomouc</span><span class="city-count">2</span></span><span class="city-pill city-more">+4 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="austria" data-count="56">
+  <a href="https://austria.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇦🇹</span>
+      <div class="card-info">
+        <h2>Austria</h2>
+        <div class="badges">
+          <span class="badge-firms">56 firms</span>
+          <span class="badge-cities">12 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Vienna</span><span class="city-count">30</span></span><span class="city-pill"><span class="city-name">Graz</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Salzburg</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Linz</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Innsbruck</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Klagenfurt</span><span class="city-count">3</span></span><span class="city-pill city-more">+6 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="romania" data-count="55">
+  <a href="https://romania.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇷🇴</span>
+      <div class="card-info">
+        <h2>Romania</h2>
+        <div class="badges">
+          <span class="badge-firms">55 firms</span>
+          <span class="badge-cities">14 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Bucharest</span><span class="city-count">29</span></span><span class="city-pill"><span class="city-name">Cluj-Napoca</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Timisoara</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Iasi</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Constanta</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Sibiu</span><span class="city-count">2</span></span><span class="city-pill city-more">+8 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="greece" data-count="88">
+  <a href="https://greece.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇬🇷</span>
+      <div class="card-info">
+        <h2>Greece</h2>
+        <div class="badges">
+          <span class="badge-firms">88 firms</span>
+          <span class="badge-cities">15 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Athens</span><span class="city-count">51</span></span><span class="city-pill"><span class="city-name">Thessaloniki</span><span class="city-count">10</span></span><span class="city-pill"><span class="city-name">Patras</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Heraklion</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Rhodes</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Chania</span><span class="city-count">3</span></span><span class="city-pill city-more">+9 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="portugal" data-count="93">
+  <a href="https://portugal.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇵🇹</span>
+      <div class="card-info">
+        <h2>Portugal</h2>
+        <div class="badges">
+          <span class="badge-firms">93 firms</span>
+          <span class="badge-cities">25 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Lisbon</span><span class="city-count">41</span></span><span class="city-pill"><span class="city-name">Porto</span><span class="city-count">12</span></span><span class="city-pill"><span class="city-name">Lisbon, Porto</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Funchal</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Faro</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Cascais</span><span class="city-count">3</span></span><span class="city-pill city-more">+19 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="sweden" data-count="65">
+  <a href="https://sweden.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇸🇪</span>
+      <div class="card-info">
+        <h2>Sweden</h2>
+        <div class="badges">
+          <span class="badge-firms">65 firms</span>
+          <span class="badge-cities">12 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Stockholm</span><span class="city-count">43</span></span><span class="city-pill"><span class="city-name">Gothenburg</span><span class="city-count">6</span></span><span class="city-pill"><span class="city-name">Malmö</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Uppsala</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Västerås</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Örebro</span><span class="city-count">1</span></span><span class="city-pill city-more">+6 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="switzerland" data-count="67">
+  <a href="https://switzerland.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇨🇭</span>
+      <div class="card-info">
+        <h2>Switzerland</h2>
+        <div class="badges">
+          <span class="badge-firms">67 firms</span>
+          <span class="badge-cities">19 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Zurich</span><span class="city-count">18</span></span><span class="city-pill"><span class="city-name">Geneva</span><span class="city-count">12</span></span><span class="city-pill"><span class="city-name">Basel</span><span class="city-count">9</span></span><span class="city-pill"><span class="city-name">Lausanne</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Zug</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Bern</span><span class="city-count">3</span></span><span class="city-pill city-more">+13 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="belgium" data-count="50">
+  <a href="https://belgium.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇧🇪</span>
+      <div class="card-info">
+        <h2>Belgium</h2>
+        <div class="badges">
+          <span class="badge-firms">50 firms</span>
+          <span class="badge-cities">10 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Brussels</span><span class="city-count">36</span></span><span class="city-pill"><span class="city-name">Antwerp</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Ghent</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Bruges</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Liège</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Leuven</span><span class="city-count">1</span></span><span class="city-pill city-more">+4 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="denmark" data-count="61">
+  <a href="https://denmark.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇩🇰</span>
+      <div class="card-info">
+        <h2>Denmark</h2>
+        <div class="badges">
+          <span class="badge-firms">61 firms</span>
+          <span class="badge-cities">7 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Copenhagen</span><span class="city-count">46</span></span><span class="city-pill"><span class="city-name">Aarhus</span><span class="city-count">6</span></span><span class="city-pill"><span class="city-name">Odense</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Aalborg</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Esbjerg</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Herning</span><span class="city-count">1</span></span><span class="city-pill city-more">+1 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="ireland" data-count="72">
+  <a href="https://ireland.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇮🇪</span>
+      <div class="card-info">
+        <h2>Ireland</h2>
+        <div class="badges">
+          <span class="badge-firms">72 firms</span>
+          <span class="badge-cities">17 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Dublin</span><span class="city-count">45</span></span><span class="city-pill"><span class="city-name">Cork</span><span class="city-count">6</span></span><span class="city-pill"><span class="city-name">Galway</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Limerick</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Waterford</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Kilkenny</span><span class="city-count">1</span></span><span class="city-pill city-more">+11 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="hungary" data-count="61">
+  <a href="https://hungary.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇭🇺</span>
+      <div class="card-info">
+        <h2>Hungary</h2>
+        <div class="badges">
+          <span class="badge-firms">61 firms</span>
+          <span class="badge-cities">10 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Budapest</span><span class="city-count">39</span></span><span class="city-pill"><span class="city-name">Debrecen</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Miskolc</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Szeged</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Pecs</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Gyor</span><span class="city-count">3</span></span><span class="city-pill city-more">+4 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="poland" data-count="105">
+  <a href="https://poland.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇵🇱</span>
+      <div class="card-info">
+        <h2>Poland</h2>
+        <div class="badges">
+          <span class="badge-firms">105 firms</span>
+          <span class="badge-cities">1 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Other</span><span class="city-count">105</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="norway" data-count="46">
+  <a href="https://norway.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇳🇴</span>
+      <div class="card-info">
+        <h2>Norway</h2>
+        <div class="badges">
+          <span class="badge-firms">46 firms</span>
+          <span class="badge-cities">6 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Oslo</span><span class="city-count">34</span></span><span class="city-pill"><span class="city-name">Stavanger</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Bergen</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Trondheim</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Fredrikstad</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Kristiansand</span><span class="city-count">1</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="finland" data-count="40">
+  <a href="https://finland.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇫🇮</span>
+      <div class="card-info">
+        <h2>Finland</h2>
+        <div class="badges">
+          <span class="badge-firms">40 firms</span>
+          <span class="badge-cities">10 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Helsinki</span><span class="city-count">26</span></span><span class="city-pill"><span class="city-name">Turku</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Tampere</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Oulu</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Lahti</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Kuopio</span><span class="city-count">1</span></span><span class="city-pill city-more">+4 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="united kingdom" data-count="68">
+  <a href="https://united-kingdom.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇬🇧</span>
+      <div class="card-info">
+        <h2>United Kingdom</h2>
+        <div class="badges">
+          <span class="badge-firms">68 firms</span>
+          <span class="badge-cities">12 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">London</span><span class="city-count">35</span></span><span class="city-pill"><span class="city-name">Bristol</span><span class="city-count">6</span></span><span class="city-pill"><span class="city-name">Manchester</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Cardiff</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Birmingham</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Edinburgh</span><span class="city-count">3</span></span><span class="city-pill city-more">+6 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="croatia" data-count="40">
+  <a href="https://croatia.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇭🇷</span>
+      <div class="card-info">
+        <h2>Croatia</h2>
+        <div class="badges">
+          <span class="badge-firms">40 firms</span>
+          <span class="badge-cities">6 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Zagreb</span><span class="city-count">27</span></span><span class="city-pill"><span class="city-name">Split</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Dubrovnik</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Rijeka</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Zadar</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Pula</span><span class="city-count">1</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="bulgaria" data-count="39">
+  <a href="https://bulgaria.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇧🇬</span>
+      <div class="card-info">
+        <h2>Bulgaria</h2>
+        <div class="badges">
+          <span class="badge-firms">39 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Sofia</span><span class="city-count">30</span></span><span class="city-pill"><span class="city-name">Plovdiv</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Varna</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Burgas</span><span class="city-count">1</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="slovakia" data-count="57">
+  <a href="https://slovakia.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇸🇰</span>
+      <div class="card-info">
+        <h2>Slovakia</h2>
+        <div class="badges">
+          <span class="badge-firms">57 firms</span>
+          <span class="badge-cities">7 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Bratislava</span><span class="city-count">40</span></span><span class="city-pill"><span class="city-name">Kosice</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Nitra</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Presov</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Banska Bystrica</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Zilina</span><span class="city-count">1</span></span><span class="city-pill city-more">+1 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="slovenia" data-count="47">
+  <a href="https://slovenia.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇸🇮</span>
+      <div class="card-info">
+        <h2>Slovenia</h2>
+        <div class="badges">
+          <span class="badge-firms">47 firms</span>
+          <span class="badge-cities">6 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Ljubljana</span><span class="city-count">31</span></span><span class="city-pill"><span class="city-name">Maribor</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Celje</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Koper</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Kranj</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Novo Mesto</span><span class="city-count">1</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="estonia" data-count="50">
+  <a href="https://estonia.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇪🇪</span>
+      <div class="card-info">
+        <h2>Estonia</h2>
+        <div class="badges">
+          <span class="badge-firms">50 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Tallinn</span><span class="city-count">40</span></span><span class="city-pill"><span class="city-name">Tartu</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Narva</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Parnu</span><span class="city-count">3</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="latvia" data-count="48">
+  <a href="https://latvia.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇱🇻</span>
+      <div class="card-info">
+        <h2>Latvia</h2>
+        <div class="badges">
+          <span class="badge-firms">48 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Riga</span><span class="city-count">39</span></span><span class="city-pill"><span class="city-name">Daugavpils</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Jelgava</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Liepaja</span><span class="city-count">3</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="lithuania" data-count="48">
+  <a href="https://lithuania.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇱🇹</span>
+      <div class="card-info">
+        <h2>Lithuania</h2>
+        <div class="badges">
+          <span class="badge-firms">48 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Vilnius</span><span class="city-count">38</span></span><span class="city-pill"><span class="city-name">Kaunas</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Klaipeda</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Siauliai</span><span class="city-count">3</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="luxembourg" data-count="39">
+  <a href="https://luxembourg.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇱🇺</span>
+      <div class="card-info">
+        <h2>Luxembourg</h2>
+        <div class="badges">
+          <span class="badge-firms">39 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Luxembourg City</span><span class="city-count">17</span></span><span class="city-pill"><span class="city-name">Luxembourg</span><span class="city-count">12</span></span><span class="city-pill"><span class="city-name">Esch-sur-Alzette</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Differdange</span><span class="city-count">5</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="malta" data-count="44">
+  <a href="https://malta.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇲🇹</span>
+      <div class="card-info">
+        <h2>Malta</h2>
+        <div class="badges">
+          <span class="badge-firms">44 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Valletta</span><span class="city-count">23</span></span><span class="city-pill"><span class="city-name">Sliema</span><span class="city-count">15</span></span><span class="city-pill"><span class="city-name">St Julian's</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Mdina</span><span class="city-count">3</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="cyprus" data-count="34">
+  <a href="https://cyprus.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇨🇾</span>
+      <div class="card-info">
+        <h2>Cyprus</h2>
+        <div class="badges">
+          <span class="badge-firms">34 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Nicosia</span><span class="city-count">15</span></span><span class="city-pill"><span class="city-name">Limassol</span><span class="city-count">13</span></span><span class="city-pill"><span class="city-name">Larnaca</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Paphos</span><span class="city-count">3</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="serbia" data-count="43">
+  <a href="https://serbia.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇷🇸</span>
+      <div class="card-info">
+        <h2>Serbia</h2>
+        <div class="badges">
+          <span class="badge-firms">43 firms</span>
+          <span class="badge-cities">5 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Belgrade</span><span class="city-count">28</span></span><span class="city-pill"><span class="city-name">Novi Sad</span><span class="city-count">6</span></span><span class="city-pill"><span class="city-name">Kragujevac</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Nis</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Niš</span><span class="city-count">2</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="ukraine" data-count="41">
+  <a href="https://ukraine.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇺🇦</span>
+      <div class="card-info">
+        <h2>Ukraine</h2>
+        <div class="badges">
+          <span class="badge-firms">41 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Kyiv</span><span class="city-count">31</span></span><span class="city-pill"><span class="city-name">Lviv</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Odessa</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Kharkiv</span><span class="city-count">3</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="albania" data-count="41">
+  <a href="https://albania.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇦🇱</span>
+      <div class="card-info">
+        <h2>Albania</h2>
+        <div class="badges">
+          <span class="badge-firms">41 firms</span>
+          <span class="badge-cities">5 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Tirana</span><span class="city-count">31</span></span><span class="city-pill"><span class="city-name">Durres</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Vlore</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Shkoder</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Durrës</span><span class="city-count">1</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="north macedonia" data-count="27">
+  <a href="https://north-macedonia.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇲🇰</span>
+      <div class="card-info">
+        <h2>North Macedonia</h2>
+        <div class="badges">
+          <span class="badge-firms">27 firms</span>
+          <span class="badge-cities">10 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Skopje</span><span class="city-count">12</span></span><span class="city-pill"><span class="city-name">Bitola</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Ohrid</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Kumanovo</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Tetovo</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Veles</span><span class="city-count">1</span></span><span class="city-pill city-more">+4 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="montenegro" data-count="27">
+  <a href="https://montenegro.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇲🇪</span>
+      <div class="card-info">
+        <h2>Montenegro</h2>
+        <div class="badges">
+          <span class="badge-firms">27 firms</span>
+          <span class="badge-cities">11 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Podgorica</span><span class="city-count">11</span></span><span class="city-pill"><span class="city-name">Budva</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Kotor</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Cetinje</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Bar</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Tivat</span><span class="city-count">1</span></span><span class="city-pill city-more">+5 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="moldova" data-count="27">
+  <a href="https://moldova.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇲🇩</span>
+      <div class="card-info">
+        <h2>Moldova</h2>
+        <div class="badges">
+          <span class="badge-firms">27 firms</span>
+          <span class="badge-cities">3 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Chisinau</span><span class="city-count">23</span></span><span class="city-pill"><span class="city-name">Balti</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Tiraspol</span><span class="city-count">2</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="iceland" data-count="26">
+  <a href="https://iceland.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇮🇸</span>
+      <div class="card-info">
+        <h2>Iceland</h2>
+        <div class="badges">
+          <span class="badge-firms">26 firms</span>
+          <span class="badge-cities">5 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Reykjavik</span><span class="city-count">19</span></span><span class="city-pill"><span class="city-name">Akureyri</span><span class="city-count">3</span></span><span class="city-pill"><span class="city-name">Hafnarfjordur</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Akranes</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Ísafjörður</span><span class="city-count">1</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="liechtenstein" data-count="26">
+  <a href="https://liechtenstein.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇱🇮</span>
+      <div class="card-info">
+        <h2>Liechtenstein</h2>
+        <div class="badges">
+          <span class="badge-firms">26 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Vaduz</span><span class="city-count">15</span></span><span class="city-pill"><span class="city-name">Schaan</span><span class="city-count">7</span></span><span class="city-pill"><span class="city-name">Balzers</span><span class="city-count">2</span></span><span class="city-pill"><span class="city-name">Triesen</span><span class="city-count">2</span></span></div>
+  </a>
+</div>
+<div class="country-card" data-name="kosovo" data-count="27">
+  <a href="https://kosovo.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇽🇰</span>
+      <div class="card-info">
+        <h2>Kosovo</h2>
+        <div class="badges">
+          <span class="badge-firms">27 firms</span>
+          <span class="badge-cities">7 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Pristina</span><span class="city-count">15</span></span><span class="city-pill"><span class="city-name">Prizren</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Peja</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Ferizaj</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Mitrovica</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Hani i Elezit</span><span class="city-count">1</span></span><span class="city-pill city-more">+1 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="belarus" data-count="30">
+  <a href="https://belarus.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇧🇾</span>
+      <div class="card-info">
+        <h2>Belarus</h2>
+        <div class="badges">
+          <span class="badge-firms">30 firms</span>
+          <span class="badge-cities">11 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Minsk</span><span class="city-count">11</span></span><span class="city-pill"><span class="city-name">Grodno</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Brest</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Vitebsk</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Gomel</span><span class="city-count">1</span></span><span class="city-pill"><span class="city-name">Mogilev</span><span class="city-count">1</span></span><span class="city-pill city-more">+5 more</span></div>
+  </a>
+</div>
+<div class="country-card" data-name="bosnia & herzegovina" data-count="27">
+  <a href="https://bosnia.avokatfinder.com/" class="card-inner">
+    <div class="card-top">
+      <span class="flag">🇧🇦</span>
+      <div class="card-info">
+        <h2>Bosnia & Herzegovina</h2>
+        <div class="badges">
+          <span class="badge-firms">27 firms</span>
+          <span class="badge-cities">4 cities</span>
+        </div>
+      </div>
+      <span class="arrow">&#8594;</span>
+    </div>
+    <div class="city-row"><span class="city-pill"><span class="city-name">Sarajevo</span><span class="city-count">16</span></span><span class="city-pill"><span class="city-name">Mostar</span><span class="city-count">5</span></span><span class="city-pill"><span class="city-name">Tuzla</span><span class="city-count">4</span></span><span class="city-pill"><span class="city-name">Banja Luka</span><span class="city-count">2</span></span></div>
+  </a>
+</div>
+  </div>
+</section>
+<footer class="site-footer">
+  <p>&copy; 2026 Av&#246;katFinder &middot; English-speaking legal directory for expats in Europe &middot; <a href="mailto:info@avokatfinder.com">info@avokatfinder.com</a></p>
+</footer>
+<script>
+const q=document.getElementById('q'),sc=document.getElementById('sc'),cards=document.querySelectorAll('.country-card');
+q.addEventListener('input',()=>{
+  const v=q.value.toLowerCase().trim();let n=0;
+  cards.forEach(c=>{const m=!v||c.dataset.name.includes(v);c.classList.toggle('hidden',!m);if(m)n++;});
+  sc.textContent=v?`Showing ${n} of 41 countries`:'Showing all 41 countries';
+});
+</script>
+</body>
+</html>

@@ -67,6 +67,18 @@ nav.site-nav .logo{font-weight:700;font-size:1.05rem;opacity:1}
 .site-footer{background:#1a2332;color:#94a3b8;padding:2rem 1.5rem;margin-top:3rem;font-size:.88rem;text-align:center}
 .site-footer a{color:#94a3b8;text-decoration:none}
 @media(max-width:640px){.article-hero{padding:1.75rem 0}.article-hero h1{font-size:1.3rem}.cta-box{padding:1.5rem 1.25rem}.doc-table{font-size:.82rem}}
+
+.site-header{background:var(--cta-bg,#1E3A5F);position:sticky;top:0;z-index:100;box-shadow:0 1px 0 rgba(255,255,255,.06),0 2px 8px rgba(0,0,0,.2)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;max-width:900px;margin:0 auto;height:64px}
+.header-logo{display:flex;align-items:center;gap:8px;color:#fff;font-size:1.05rem;font-weight:700;text-decoration:none;letter-spacing:-.3px}
+.header-logo span{color:#CE2939}
+.site-header nav{display:flex;align-items:center;gap:2px}
+.site-header nav a{color:rgba(255,255,255,.78);font-size:.875rem;font-weight:500;padding:7px 12px;border-radius:6px;text-decoration:none;white-space:nowrap}
+.site-header nav a:hover{color:#fff;background:rgba(255,255,255,.1)}
+.site-header .nav-cta{background:#CE2939!important;color:#fff!important;padding:7px 14px!important}
+.site-header .nav-cta:hover{background:#b02030!important}
+.hamburger{display:none;cursor:pointer;background:none;border:none;color:#fff;font-size:1.4rem;padding:.25rem}
+@media(max-width:700px){.site-header nav{display:none;flex-direction:column;align-items:flex-start;position:absolute;top:64px;left:0;right:0;background:#1E3A5F;padding:1rem 1.5rem;gap:.25rem;box-shadow:0 4px 12px rgba(0,0,0,.3)}.site-header nav.open{display:flex}.hamburger{display:block}}
 </style>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What documents do I need to move to Hungary?","acceptedAnswer":{"@type":"Answer","text":"You need a passport, birth certificate (apostilled), police clearance, proof of financial means, accommodation proof and health insurance. After arrival apply for the residence permit and tax ID."}},{"@type":"Question","name":"How long does a residence permit take in Hungary?","acceptedAnswer":{"@type":"Answer","text":"Standard processing is 30-90 days. Complex cases can take up to 6 months. Start as soon as you arrive."}},{"@type":"Question","name":"Do I need a lawyer to move to Hungary?","acceptedAnswer":{"@type":"Answer","text":"Not legally required but strongly recommended. Mistakes are costly. A vetted English-speaking lawyer saves time and avoids rejections."}}]}</script>
@@ -77,14 +89,19 @@ nav.site-nav .logo{font-weight:700;font-size:1.05rem;opacity:1}
 <meta name="twitter:description" content="Complete guide to every document expats need when moving to Hungary in 2026. Residence permits, tax ID, health insurance, banking and property — step-by-st">
 </head>
 <body>
-<nav class="site-nav">
-<a href="https://hungary.avokatfinder.com/" class="logo">Av&#246;katFinder Hungary</a>
-<a href="https://hungary.avokatfinder.com/find-a-lawyer/">Find a Lawyer</a>
-<a href="https://hungary.avokatfinder.com/practice-areas/">Practice Areas</a>
-<a href="https://hungary.avokatfinder.com/cities/">Cities</a>
-<a href="https://hungary.avokatfinder.com/blog/">Blog</a>
-<a href="https://avokatfinder.com/concierge/" style="background:rgba(255,255,255,.15);padding:.3rem .8rem;border-radius:6px">Concierge Services</a>
+<header class="site-header">
+<div class="header-inner">
+<a href="/" class="header-logo">AvökatFinder <span>Hungary</span></a>
+<button class="hamburger" aria-label="Open menu">&#9776;</button>
+<nav>
+<a href="/practice-areas/">Practice Areas</a>
+<a href="/cities/">By City</a>
+<a href="/blog/" class="active">Expat Guides</a>
+<a href="/find-a-lawyer/" class="nav-cta">Find My Lawyer</a>
+<a href="/for-lawyers/" style="color:#fbbf24;font-weight:600">For Law Firms</a>
 </nav>
+</div>
+</header>
 <div class="article-hero">
   <div class="container">
     <div class="breadcrumb"><a href="https://hungary.avokatfinder.com/">Home</a> &rsaquo; <a href="https://hungary.avokatfinder.com/blog/">Blog</a> &rsaquo; Essential Documents Guide</div>
@@ -612,6 +629,9 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
   });
 });
 document.querySelectorAll('.faq-a').forEach(a=>{a.style.display='none';});
+</script>
+<script>
+(function(){var h=document.querySelector('.hamburger');var n=document.querySelector('.site-header nav');if(h&&n){h.addEventListener('click',function(){n.classList.toggle('open');h.textContent=n.classList.contains('open')?'✕':'☰'});}})();
 </script>
 </body>
 </html>

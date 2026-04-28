@@ -13,19 +13,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a href="/" class="logo"><span class="logo-flag">🇭🇺</span><span class="logo-text">AvökatFinder <span>Hungary</span></span></a>
-    <button class="hamburger" aria-label="Open menu">☰</button>
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="AvökatFinder" class="logo-img" width="60" height="28"><span class="logo-text">AvökatFinder <span>Hungary</span></span></a>
+    <button class="hamburger" aria-label="Open menu">&#9776;</button>
     <nav>
-      <a href="/practice-areas/" >Practice Areas</a>
-      <a href="/cities/" >By City</a>
-      <a href="/blog/" >Expat Guides</a>
+      <a href="/practice-areas/">Practice Areas</a>
+      <a href="/cities/">By City</a>
+      <a href="/blog/">Expat Guides</a>
+      <a href="/find-a-lawyer/" class="nav-cta">Find My Lawyer</a>
       <a href="/dashboard/" class="active">My Saved</a>
-      <a href="/about.html" >About</a>
     </nav>
   </div>
 </header>
@@ -35,7 +37,7 @@
     <p>Firms you have saved while browsing AvökatFinder Hungary.</p>
   </div>
 </section>
-<section style="padding:48px 24px; background:var(--bg-light);">
+<section style="padding:clamp(3rem,6vw,5rem) 24px; background:var(--off-white);">
   <div class="container">
     <div id="dashboard-root"></div>
   </div>
@@ -43,15 +45,15 @@
 
 <section class="cta-band">
   <h2>Need an English-Speaking Lawyer in Hungary?</h2>
-  <p>Browse our verified directory of law firms across Hungary's major cities. All listed firms offer English-language legal services to expats and foreign nationals.</p>
-  <a href="/practice-areas/" class="btn btn-white">Find a Lawyer by Specialisation</a>
+  <p>Browse our verified directory of law firms across Hungary’s major cities. All listed firms offer English-language legal services to expats and foreign nationals.</p>
+  <a href="/find-a-lawyer/" class="btn btn-white">Find My Lawyer in 60 Seconds</a>
 </section>
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="/" class="footer-logo">🇭🇺 AvökatFinder Hungary</a>
+      <a href="/" class="footer-logo"><img src="/img/logo.svg" alt="AvökatFinder" width="44" height="20" style="vertical-align:middle;margin-right:8px;filter:brightness(0) invert(1)">AvökatFinder Hungary</a>
       <p>The definitive English-language directory of lawyers and law firms in Hungary for expats, foreign nationals and international businesses.</p>
-      <p class="footer-disclaimer" style="margin-top:12px;">This directory is for informational purposes only. We do not provide legal advice. Always verify information directly with the firm.</p>
+      <p class="footer-disclaimer">This directory is for informational purposes only. We do not provide legal advice. Always verify information directly with the firm.</p>
     </div>
     <div class="footer-col">
       <h4>Practice Areas</h4>
@@ -59,8 +61,8 @@
 <li><a href="/practice-areas/immigration/">Immigration Law</a></li>
 <li><a href="/practice-areas/real-estate/">Real Estate Law</a></li>
 <li><a href="/practice-areas/employment/">Employment Law</a></li>
-<li><a href="/practice-areas/dispute-resolution/">Dispute Resolution & Litigation</a></li></ul>
-      <li style="list-style:none; padding:6px 0;"><a href="/practice-areas/" style="color:rgba(255,255,255,0.65); font-size:0.83rem;">View all 10 →</a></li>
+<li><a href="/practice-areas/dispute-resolution/">Dispute Resolution & Litigation</a></li>
+      <li><a href="/practice-areas/">View all 10 &rarr;</a></li></ul>
     </div>
     <div class="footer-col">
       <h4>By City</h4>
@@ -74,7 +76,8 @@
       <h4>Resources</h4>
       <ul>
         <li><a href="/blog/">Expat Legal Guides</a></li>
-        <li><a href="/blog/guide-to-lawyers-in-hungary/">Complete Hungary Legal Guide</a></li>
+        <li><a href="/find-a-lawyer/">Find My Lawyer Wizard</a></li>
+        <li><a href="/blog/guide-to-lawyers-in-hungary/">Complete Hungary Guide</a></li>
         <li><a href="/about.html">About This Directory</a></li>
         <li><a href="/dashboard/">My Saved Firms</a></li>
         <li><a href="/sitemap.xml">Sitemap</a></li>

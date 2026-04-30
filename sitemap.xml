@@ -37,12 +37,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hungary.avokatfinder.com/glossary/adasveteli-szerzodes.html</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://hungary.avokatfinder.com/glossary/adasveteli-szerzodes/</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -55,13 +49,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hungary.avokatfinder.com/glossary/foldihivatal.html</loc>
+    <loc>https://hungary.avokatfinder.com/glossary/foldihivatal/</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hungary.avokatfinder.com/glossary/jelzalog.html</loc>
+    <loc>https://hungary.avokatfinder.com/glossary/jelzalog/</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -79,7 +73,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hungary.avokatfinder.com/glossary/ugyved.html</loc>
+    <loc>https://hungary.avokatfinder.com/glossary/ugyved/</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -14,9 +14,12 @@
 - https://hungary.avokatfinder.com/glossary/adasveteli-szerzodes/
 - https://hungary.avokatfinder.com/glossary/adoszam/
 - https://hungary.avokatfinder.com/glossary/foldihivatal/
+- https://hungary.avokatfinder.com/glossary/foldihivatal/
+- https://hungary.avokatfinder.com/glossary/jelzalog/
 - https://hungary.avokatfinder.com/glossary/jelzalog/
 - https://hungary.avokatfinder.com/glossary/kozjegyzo/
 - https://hungary.avokatfinder.com/glossary/taj-szam/
+- https://hungary.avokatfinder.com/glossary/ugyved/
 - https://hungary.avokatfinder.com/glossary/ugyved/
 
 ## Site Info

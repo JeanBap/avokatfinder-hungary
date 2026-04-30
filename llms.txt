@@ -1,5 +1,31 @@
 # AvökatFinder Hungary
-> English-speaking law firm directory for Hungary
+> The English-language directory of lawyers and law firms in Hungary for expats, foreign nationals and international businesses.
 
-Directory: https://hungary.avokatfinder.com
-Email: info@avokatfinder.com
+## Main Pages
+- https://hungary.avokatfinder.com/: Home — find an English-speaking lawyer in Hungary
+- https://hungary.avokatfinder.com/lawyers/: Directory of verified law firms and lawyers in Hungary
+- https://hungary.avokatfinder.com/glossary/: Legal glossary — plain-English definitions of Hungary legal terms
+- https://hungary.avokatfinder.com/blog/: Expat legal guides and property law articles for Hungary
+- https://hungary.avokatfinder.com/about/: About AvökatFinder Hungary
+- https://hungary.avokatfinder.com/contact/: Contact us
+
+## Legal Glossary Terms
+- https://hungary.avokatfinder.com/glossary/adasveteli-szerzodes/
+- https://hungary.avokatfinder.com/glossary/adasveteli-szerzodes/
+- https://hungary.avokatfinder.com/glossary/adoszam/
+- https://hungary.avokatfinder.com/glossary/foldihivatal/
+- https://hungary.avokatfinder.com/glossary/jelzalog/
+- https://hungary.avokatfinder.com/glossary/kozjegyzo/
+- https://hungary.avokatfinder.com/glossary/taj-szam/
+- https://hungary.avokatfinder.com/glossary/ugyved/
+
+## Site Info
+- Language: English
+- Audience: Expats, foreign nationals, international property buyers and businesses in Hungary
+- Content: Law firm directory, legal glossary, expat legal guides
+- Last updated: 2026-04-30
+- Sitemap: https://hungary.avokatfinder.com/sitemap.xml
+
+## Permissions
+User-agent: *
+Allow: /

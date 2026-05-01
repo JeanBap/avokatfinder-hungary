@@ -11,10 +11,15 @@
 
 ## Legal Glossary Terms
 - https://hungary.avokatfinder.com/glossary/adasveteli-szerzodes/
+- https://hungary.avokatfinder.com/glossary/ado-eladas-hu/
 - https://hungary.avokatfinder.com/glossary/adoszam/
 - https://hungary.avokatfinder.com/glossary/csok-hu/
+- https://hungary.avokatfinder.com/glossary/csok-plus-hu/
+- https://hungary.avokatfinder.com/glossary/foldhivatal-hu/
 - https://hungary.avokatfinder.com/glossary/foldhivatal/
 - https://hungary.avokatfinder.com/glossary/foldihivatal/
+- https://hungary.avokatfinder.com/glossary/illetekmentesseg-hu/
+- https://hungary.avokatfinder.com/glossary/ingatlankezelo-hu/
 - https://hungary.avokatfinder.com/glossary/jelzalog-hu/
 - https://hungary.avokatfinder.com/glossary/jelzalog/
 - https://hungary.avokatfinder.com/glossary/kozjegyzo/
@@ -23,6 +28,7 @@
 - https://hungary.avokatfinder.com/glossary/tulajdoni-lap/
 - https://hungary.avokatfinder.com/glossary/ugyved-hu/
 - https://hungary.avokatfinder.com/glossary/ugyved/
+- https://hungary.avokatfinder.com/glossary/ugyvedi-leteti-hu/
 - https://hungary.avokatfinder.com/glossary/vagyonszerzesi-illetek/
 
 ## Site Info

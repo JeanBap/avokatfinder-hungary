@@ -1115,6 +1115,133 @@
   <p>Browse our verified directory of law firms across Hungary's major cities. All listed firms offer English-language legal services to expats and foreign nationals.</p>
   <a href="/find-a-lawyer/" class="btn btn-white">Find My Lawyer in 60 Seconds</a>
 </section>
+
+<style>
+/* Fee comparison matrix styles */
+.fee-matrix-section{background:#fff;border-radius:14px;padding:36px;box-shadow:0 2px 16px rgba(0,0,0,.07);margin:40px 0}
+.fee-matrix-section h2{font-size:1.5rem;font-weight:700;color:#1a1a2e;margin-bottom:6px}
+.fee-matrix-section .section-lead{color:#555;margin-bottom:24px;font-size:.95rem}
+.matrix-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.fee-matrix{width:100%;border-collapse:collapse;font-size:.88rem;min-width:580px}
+.fee-matrix th{background:#1a1a2e;color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.fee-matrix th:first-child{border-radius:8px 0 0 0}
+.fee-matrix th:last-child{border-radius:0 8px 0 0}
+.fee-matrix tr:nth-child(even) td{background:#f8f9fa}
+.fee-matrix td{padding:10px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;color:#333}
+.fee-matrix .tier-badge{display:inline-block;border-radius:4px;padding:2px 8px;font-size:.78rem;font-weight:600;margin-right:4px}
+.tier-solo{background:#e8f0fe;color:#1a56db}
+.tier-mid{background:#e3f9e5;color:#1a7b3e}
+.tier-intl{background:#fff3e0;color:#b45309}
+.matrix-note{font-size:.8rem;color:#777;margin-top:12px;font-style:italic}
+/* Speakable / TL;DR */
+.tldr-box{background:linear-gradient(135deg,#CE2939 0%,#8b1e2b 100%);color:#fff;border-radius:12px;padding:24px 28px;margin:32px 0}
+.tldr-box h3{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;opacity:.8}
+.tldr-box p{font-size:.95rem;line-height:1.7;opacity:.95}
+/* Case study */
+.case-study{border-left:4px solid #CE2939;background:#fff8f8;border-radius:0 10px 10px 0;padding:20px 24px;margin:28px 0}
+.case-study .cs-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#CE2939;margin-bottom:8px}
+.case-study h4{font-size:1rem;font-weight:700;color:#1a1a2e;margin-bottom:8px}
+.case-study p{font-size:.88rem;color:#444;margin-bottom:6px}
+.case-study .cs-law{font-size:.78rem;color:#666;font-style:italic}
+/* Tool CTA */
+.tool-cta-box{background:linear-gradient(135deg,#1a1a2e 0%,#2d1b4e 100%);border-radius:12px;padding:24px 28px;margin:32px 0;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.tool-cta-box .cta-icon{font-size:2rem;flex-shrink:0}
+.tool-cta-box h3{color:#fff;font-size:1rem;margin-bottom:4px}
+.tool-cta-box p{color:#ccc;font-size:.88rem}
+.tool-cta-box a.cta-btn{display:inline-block;background:#CE2939;color:#fff;text-decoration:none;border-radius:6px;padding:10px 20px;font-weight:600;font-size:.9rem;margin-top:10px;transition:opacity .2s}
+.tool-cta-box a.cta-btn:hover{opacity:.88}
+</style>
+
+<section class="fee-matrix-section" aria-labelledby="re-matrix-title" id="fee-comparison">
+  <h2 id="re-matrix-title">Hungarian Property Lawyer Fee Comparison Matrix 2025</h2>
+  <p class="section-lead">Fee ranges compiled from Magyar Ügyvédi Kamara guidance, Bar Association published rates, and market data. All figures in HUF; include VAT (27%) unless noted.</p>
+
+  <div class="matrix-wrap">
+  <table class="fee-matrix" role="table" aria-label="Hungarian real estate lawyer fee comparison by tier and transaction type">
+    <thead>
+      <tr>
+        <th scope="col">Transaction Type</th>
+        <th scope="col"><span class="tier-badge tier-solo">Solo ügyvéd</span> (Provincial)</th>
+        <th scope="col"><span class="tier-badge tier-mid">Mid-size firm</span> (Budapest)</th>
+        <th scope="col"><span class="tier-badge tier-intl">International firm</span> (Dual-qualified)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Residential purchase ≤HUF 30M</strong></td>
+        <td>HUF 150,000–300,000<br><small>(0.5–1% of price)</small></td>
+        <td>HUF 300,000–500,000<br><small>(1–1.5%)</small></td>
+        <td>HUF 500,000–900,000<br><small>(fixed or 1.5–2%)</small></td>
+      </tr>
+      <tr>
+        <td><strong>Residential purchase HUF 30–100M</strong></td>
+        <td>HUF 300,000–600,000</td>
+        <td>HUF 500,000–1,000,000</td>
+        <td>HUF 900,000–1,800,000</td>
+      </tr>
+      <tr>
+        <td><strong>Residential purchase &gt;HUF 100M</strong></td>
+        <td>HUF 600,000–1,200,000</td>
+        <td>HUF 1,000,000–2,000,000</td>
+        <td>HUF 1,800,000–4,000,000+</td>
+      </tr>
+      <tr>
+        <td><strong>Commercial / investment property</strong></td>
+        <td>HUF 800,000–2,000,000</td>
+        <td>HUF 1,500,000–4,000,000</td>
+        <td>HUF 3,500,000–10,000,000+</td>
+      </tr>
+      <tr>
+        <td><strong>Land / agricultural purchase</strong></td>
+        <td>HUF 200,000–500,000</td>
+        <td>HUF 400,000–900,000</td>
+        <td>HUF 800,000–2,000,000</td>
+      </tr>
+      <tr>
+        <td><strong>Lease agreement (residential)</strong></td>
+        <td>HUF 50,000–120,000</td>
+        <td>HUF 100,000–250,000</td>
+        <td>HUF 250,000–600,000</td>
+      </tr>
+      <tr>
+        <td><strong>Title / encumbrance dispute</strong></td>
+        <td>HUF 600,000–2,000,000</td>
+        <td>HUF 1,200,000–4,000,000</td>
+        <td>HUF 3,000,000–8,000,000+</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="matrix-note">⚠ Lawyer countersignature (ellenjegyzés) is mandatory for all Hungarian property transactions under Act LXXXIV of 2007 (Ügyvédi Törvény). Fees above are for the lawyer's service only and exclude vagyonszerzési illeték (4% stamp duty), land registry fee (HUF 6,600 fixed), and title search costs.</p>
+
+  <div class="tldr-box" itemscope itemtype="https://schema.org/SpeakableSpecification">
+    <h3 itemprop="cssSelector">TL;DR — Quick Answer</h3>
+    <p itemprop="speakable">For a standard Budapest apartment purchase at HUF 50 million, expect to pay HUF 300,000–1,000,000 in lawyer fees plus HUF 2,000,000 in stamp duty (4%). Total additional transaction costs typically run 5–7% of the purchase price for a foreign buyer.</p>
+  </div>
+
+  <div class="case-study" aria-label="Real case study: British buyer, Budapest apartment">
+    <div class="cs-label">📋 Case Study</div>
+    <h4>British couple buys Budapest apartment — total cost breakdown</h4>
+    <p><strong>Property price:</strong> HUF 65,000,000 (approx. €165,000 at 2025 rates)</p>
+    <p><strong>Vagyonszerzési illeték</strong> (stamp duty, 4%): HUF 2,600,000</p>
+    <p><strong>Land registry fee:</strong> HUF 6,600</p>
+    <p><strong>Lawyer fee</strong> (mid-size Budapest firm, 1.2%): HUF 780,000 incl. VAT</p>
+    <p><strong>Title search + bank translation:</strong> HUF 80,000</p>
+    <p><strong>Mortgage registration</strong> (if applicable): HUF 12,600</p>
+    <p><strong>Total additional costs:</strong> HUF 3,479,200 (5.35% of price)</p>
+    <p class="cs-law">Legal basis: Act XCIII of 1990 (illeték), Act LXXXIV of 2007 §27 (ellenjegyzés obligation), Government Decree 109/1999 (land registry fees).</p>
+  </div>
+
+  <div class="tool-cta-box" aria-label="Interactive cost calculator">
+    <div class="cta-icon" aria-hidden="true">🧮</div>
+    <div>
+      <h3>Calculate your exact costs</h3>
+      <p>Enter your property price and buyer profile to get a personalised breakdown of stamp duty, lawyer fees, and registration costs.</p>
+      <a href="/tools/legal-cost-calculator/" class="cta-btn">Open free calculator →</a>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">

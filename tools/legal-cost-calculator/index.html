@@ -441,7 +441,7 @@ function updatePropCalc(){
 
   document.getElementById('prop-results').innerHTML = `
     <div class="result-row sub"><span>Purchase price</span><span>${fmt(price)} ${fmtEUR(price)}</span></div>
-    <div class="result-row"><span>Vagyonszerzési illeték (${illetekNote})</span><span>${fmt(illetak||illetek)}</span></div>
+    <div class="result-row"><span>Vagyonszerzési illeték (${illetekNote})</span><span>${fmt(illetek||illetek)}</span></div>
     ${vat>0?`<div class="result-row"><span>ÁFA — ${vatNote}</span><span>${fmt(vat)}</span></div>`:''}
     <div class="result-row"><span>Lawyer fee (ellenjegyzési díj) @ ${rate}%</span><span>${fmt(lawyerFee)}</span></div>
     <div class="result-row sub"><span>Land registry fee (ingatlan-nyilvántartás)</span><span>${fmt(landReg)}</span></div>

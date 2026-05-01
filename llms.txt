@@ -48,3 +48,11 @@ Allow: /
 - [Hungarian Legal Document Templates](https://hungary.avokatfinder.com/tools/nda-template/) — Bilingual NDA, retainer letter, and Bar Association complaint templates
 - [How to Choose a Lawyer in Hungary](https://hungary.avokatfinder.com/tools/how-to-choose-a-lawyer/) — Interactive decision tree and checklist for selecting Hungarian legal counsel
 - [Legal Tools Hub](https://hungary.avokatfinder.com/tools/) — Directory of all free Hungarian legal tools: calculators, templates, and decision guides
+- [Budapest Lawyers](https://hungary.avokatfinder.com/cities/budapest/) — Find English-speaking lawyers in Budapest, Hungary
+- [Debrecen Lawyers](https://hungary.avokatfinder.com/cities/debrecen/) — Find English-speaking lawyers in Debrecen, Hungary
+- [Győr Lawyers](https://hungary.avokatfinder.com/cities/gyor/) — Find English-speaking lawyers in Győr, Hungary
+- [Kecskemét Lawyers](https://hungary.avokatfinder.com/cities/kecskemet/) — Find English-speaking lawyers in Kecskemét, Hungary
+- [Miskolc Lawyers](https://hungary.avokatfinder.com/cities/miskolc/) — Find English-speaking lawyers in Miskolc, Hungary
+- [Pécs Lawyers](https://hungary.avokatfinder.com/cities/pecs/) — Find English-speaking lawyers in Pécs, Hungary
+- [Szeged Lawyers](https://hungary.avokatfinder.com/cities/szeged/) — Find English-speaking lawyers in Szeged, Hungary
+- [Szolnok Lawyers](https://hungary.avokatfinder.com/cities/szolnok/) — Find English-speaking lawyers in Szolnok, Hungary

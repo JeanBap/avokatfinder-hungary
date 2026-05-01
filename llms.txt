@@ -56,3 +56,5 @@ Allow: /
 - [Pécs Lawyers](https://hungary.avokatfinder.com/cities/pecs/) — Find English-speaking lawyers in Pécs, Hungary
 - [Szeged Lawyers](https://hungary.avokatfinder.com/cities/szeged/) — Find English-speaking lawyers in Szeged, Hungary
 - [Szolnok Lawyers](https://hungary.avokatfinder.com/cities/szolnok/) — Find English-speaking lawyers in Szolnok, Hungary
+- [munkajog](https://hungary.avokatfinder.com/glossary/munkajog/) — Hungarian Labour Law (Munkajog) — employment contracts, dismissal rights, and minimum wage for expats
+- [oroklesi-jog](https://hungary.avokatfinder.com/glossary/oroklesi-jog/) — Hungarian Inheritance Law (Öröklési Jog) — succession, wills, forced shares, and estate tax

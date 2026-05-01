@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Choose a Lawyer in Hungary 2025 | Interactive Guide | AvökatFinder</title>
+<meta name="description" content="Interactive decision tree: find the right type of Hungarian lawyer for your situation — property, immigration, business, family law. Includes checklist, red flags, and case studies referencing Hungarian law.">
+<link rel="canonical" href="https://hungary.avokatfinder.com/tools/how-to-choose-a-lawyer/">
+<meta property="og:title" content="How to Choose a Lawyer in Hungary | AvökatFinder">
+<meta property="og:description" content="Step-by-step guide to finding the right Hungarian ügyvéd for your specific legal need.">
+<meta property="og:url" content="https://hungary.avokatfinder.com/tools/how-to-choose-a-lawyer/">
+<meta property="og:image" content="https://avokatfinder.com/og/hungary.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AvökatFinder","item":"https://avokatfinder.com/"},{"@type":"ListItem","position":2,"name":"Hungary","item":"https://hungary.avokatfinder.com/"},{"@type":"ListItem","position":3,"name":"Tools","item":"https://hungary.avokatfinder.com/tools/"},{"@type":"ListItem","position":4,"name":"How to Choose a Lawyer","item":"https://hungary.avokatfinder.com/tools/how-to-choose-a-lawyer/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between an ügyvéd and a közjegyző in Hungary?","acceptedAnswer":{"@type":"Answer","text":"An ügyvéd (lawyer/solicitor) provides legal advice, drafts contracts, represents clients in court, and is required to countersign most property purchase agreements in Hungary. A közjegyző (notary public) is a public official who authenticates documents, handles estate administration (hagyatéki eljárás), and certifies facts — but does not give legal advice or represent clients. For a property purchase, you need an ügyvéd (mandatory for countersignature); the közjegyző is used for estate matters and authenticated documents."}},{"@type":"Question","name":"How do I verify a Hungarian lawyer is registered?","acceptedAnswer":{"@type":"Answer","text":"Search the official Hungarian Bar Association register at magyarugyvedikamara.hu — the search is free and public. You can search by name, bar registration number (kamarai szám), or firm name. A registered ügyvéd will have an active status. Beware of individuals offering 'legal advice' in Hungary without bar registration — providing legal advice for payment without bar registration is a criminal offence under Act LXXXIV of 2007."}},{"@type":"Question","name":"Is a free initial consultation standard with Hungarian lawyers?","acceptedAnswer":{"@type":"Answer","text":"A free 30-minute initial consultation is common practice among Hungarian law firms serving international clients, particularly in Budapest. It allows both parties to assess the matter and agree fees before a formal retainer is signed. This is not mandatory — some firms charge for all time. Ask when booking whether the initial meeting is free."}},{"@type":"Question","name":"Can I use a foreign (non-Hungarian) lawyer for a Hungarian property purchase?","acceptedAnswer":{"@type":"Answer","text":"No — for the mandatory countersignature (ellenjegyzés) on a Hungarian property purchase agreement, only a registered Hungarian ügyvéd may sign. The Land Registry (Ingatlan-nyilvántartás) will reject documents countersigned by foreign lawyers. You may also engage a foreign lawyer for advice (tax, international structuring), but the on-the-ground Hungarian countersignature role requires an ügyvéd registered with a Hungarian bar association."}}]}</script>
+<link rel="stylesheet" href="/css/style.css">
+<style>
+:root{--country-primary:#CE2939;--country-secondary:#436F4D;}
+.guide-container{max-width:860px;margin:2rem auto;padding:0 1rem;}
+.decision-tree{background:#f9f9fb;border:2px solid #ddd;border-radius:8px;padding:1.5rem;margin:1.5rem 0;}
+.dt-question{font-size:1.1rem;font-weight:700;color:var(--country-primary);margin-bottom:1rem;}
+.dt-options{display:flex;flex-wrap:wrap;gap:.75rem;}
+.dt-btn{background:#fff;border:2px solid var(--country-primary);color:var(--country-primary);border-radius:6px;padding:.6rem 1.1rem;cursor:pointer;font-size:.95rem;font-weight:600;transition:all .2s;}
+.dt-btn:hover,.dt-btn.selected{background:var(--country-primary);color:#fff;}
+.dt-result{background:#e8f5e9;border:2px solid var(--country-secondary);border-radius:8px;padding:1.25rem;margin-top:1rem;display:none;}
+.dt-result.show{display:block;}
+.dt-result h3{color:var(--country-secondary);margin-top:0;}
+.checklist-box{background:#fff;border:1.5px solid #ddd;border-radius:8px;padding:1.25rem;margin:1rem 0;}
+.checklist-box h3{color:var(--country-primary);margin-top:0;}
+.checklist-item{display:flex;gap:.75rem;align-items:flex-start;padding:.4rem 0;border-bottom:1px solid #f0f0f0;}
+.checklist-item:last-child{border-bottom:none;}
+.checklist-item input[type=checkbox]{margin-top:.2rem;accent-color:var(--country-primary);width:18px;height:18px;flex-shrink:0;}
+.red-flag{background:#fff5f5;border-left:4px solid var(--country-primary);padding:.75rem 1rem;border-radius:0 5px 5px 0;margin:.5rem 0;font-size:.9rem;}
+.case-study{background:#fffef0;border:1.5px solid #e5c000;border-radius:8px;padding:1.25rem;margin:1.5rem 0;}
+.case-study h3{color:#b07800;margin-top:0;}
+.case-ref{background:#e8f4f8;border-left:3px solid #0ea5e9;padding:.4rem .75rem;font-size:.82rem;margin:.5rem 0;border-radius:0 4px 4px 0;}
+.cta-bar{background:var(--country-primary);color:#fff;border-radius:8px;padding:1.5rem 2rem;margin-top:2rem;text-align:center;}
+.cta-bar a{background:#fff;color:var(--country-primary);font-weight:700;padding:.6rem 1.5rem;border-radius:5px;text-decoration:none;display:inline-block;margin-top:.5rem;}
+.lawyer-type-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0;}
+.lawyer-type-card{background:#f9f9fb;border:1.5px solid #ddd;border-radius:8px;padding:1rem;border-top:3px solid var(--country-primary);}
+.lawyer-type-card h4{color:var(--country-primary);margin:0 0 .5rem;}
+</style>
+<meta name="robots" content="index, follow">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="AvökatFinder" class="logo-img" width="60" height="28"><span class="logo-text">AvökatFinder <span>Hungary</span></span></a>
+    <button class="hamburger" aria-label="Open menu">&#9776;</button>
+    <nav><a href="/practice-areas/">Practice Areas</a><a href="/cities/">By City</a><a href="/blog/">Expat Guides</a><a href="/find-a-lawyer/">Find a Lawyer</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="guide-container">
+  <nav aria-label="Breadcrumb" style="font-size:.85rem;margin-bottom:1.5rem">
+    <a href="/">AvökatFinder</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; How to Choose a Lawyer
+  </nav>
+
+  <h1 style="color:var(--country-primary);margin-bottom:.5rem">How to Choose a Lawyer in Hungary</h1>
+  <p style="margin-top:0;color:#555;max-width:680px">Hungary's legal market has 12,000+ registered ügyvédi irodák (law offices). This interactive guide helps you identify the right type of lawyer for your specific situation, what to look for, and how to avoid common mistakes.</p>
+
+  <!-- Step 1: Decision Tree -->
+  <section aria-labelledby="dt-heading">
+    <h2 id="dt-heading" style="color:var(--country-primary)">Step 1: What Do You Need a Lawyer For?</h2>
+    <div class="decision-tree" role="group" aria-label="Lawyer type decision tree">
+      <div class="dt-question">Select your primary legal need:</div>
+      <div class="dt-options">
+        <button class="dt-btn" onclick="showResult('property')">🏠 Buying / Selling Property</button>
+        <button class="dt-btn" onclick="showResult('company')">🏢 Starting / Running a Business</button>
+        <button class="dt-btn" onclick="showResult('immigration')">🌍 Visa / Residency / Golden Visa</button>
+        <button class="dt-btn" onclick="showResult('employment')">💼 Employment Dispute or Contract</button>
+        <button class="dt-btn" onclick="showResult('family')">👨‍👩‍👧 Family Law / Divorce / Custody</button>
+        <button class="dt-btn" onclick="showResult('criminal')">⚖ Criminal Defence</button>
+        <button class="dt-btn" onclick="showResult('dispute')">📋 Commercial Dispute / Debt Recovery</button>
+        <button class="dt-btn" onclick="showResult('gdpr')">🔒 GDPR / Data Protection</button>
+      </div>
+
+      <div id="result-property" class="dt-result">
+        <h3>You need: Ingatlanügyvéd (Property Lawyer)</h3>
+        <p><strong>Why mandatory:</strong> Under Hungarian law, the sale and purchase agreement (<em>adásvételi szerződés</em>) must be <em>countersigned by a registered ügyvéd</em> (ellenjegyezve) for the Land Registry to accept registration — without this, the property transfer is void. The land registry will reject any contract not countersigned by a bar-registered ügyvéd.</p>
+        <p><strong>What they do:</strong> Draft and review the SPA, conduct title due diligence (<em>tulajdonilap-lekérdezés</em>), check for encumbrances (<em>terhek</em>), coordinate with the Land Registry, advise on illeték liability and exemptions, and attend signing.</p>
+        <p><strong>Who pays:</strong> By convention, the buyer pays the lawyer's fee in Hungary — though this is negotiable. Seller and buyer may use the same lawyer (common) or separate lawyers (recommended for complex deals).</p>
+        <p><strong>Fee range:</strong> 0.5–1.5% of purchase price. <a href="/tools/legal-cost-calculator/">Use our calculator &rarr;</a></p>
+        <p><strong>Specialist check:</strong> For agricultural land, Budai Hegység, or properties with encumbrances, seek an ügyvéd with specific ingatlan practice. For new builds (VEFA) or developer contracts, ensure the ügyvéd has VEFA experience.</p>
+        <a href="/practice-areas/real-estate/" style="color:var(--country-primary);font-weight:600">→ View Real Estate Lawyers in Hungary</a>
+      </div>
+
+      <div id="result-company" class="dt-result">
+        <h3>You need: Cégalapítási / Kereskedelmi Ügyvéd (Corporate Lawyer)</h3>
+        <p><strong>Why important:</strong> Forming a Kft. (LLC) requires an ügyvéd to countersign the deed of incorporation (<em>alapítási okirat ellenjegyzése</em>) under Act V of 2006 on Company Registration. Filing via e-Cégeljárás without an ügyvéd is permitted for the simplified model articles procedure only — any custom structure requires countersignature.</p>
+        <p><strong>What they do:</strong> Draft articles of association, file with the Court of Registration (Cégbíróság), register the company for tax (NAV), draft shareholder agreements, employment contracts, and ongoing commercial advisory.</p>
+        <p><strong>Timeline:</strong> Simplified formation: 1–3 days. Standard: 5–15 business days. Company registration confirmed by Cégbíróság electronically.</p>
+        <p><strong>Fee range:</strong> HUF 100,000–400,000 formation; HUF 30,000–120,000/hr for ongoing advisory. <a href="/tools/legal-cost-calculator/#fees">Full fee guide &rarr;</a></p>
+        <a href="/practice-areas/corporate-ma/" style="color:var(--country-primary);font-weight:600">→ View Corporate Lawyers in Hungary</a>
+      </div>
+
+      <div id="result-immigration" class="dt-result">
+        <h3>You need: Bevándorlási Ügyvéd (Immigration Lawyer)</h3>
+        <p><strong>Why important:</strong> Hungary's immigration system is administered by the National Directorate-General for Aliens Policing (OIF/OIN). Since 2024, the Guest Investor Visa, Digital Nomad Visa, and EU Blue Card rules have undergone significant reform. An immigration ügyvéd keeps abreast of the current Government Decrees.</p>
+        <p><strong>What they do:</strong> Assess your eligibility for each permit type, prepare and submit your application dossier, translate and apostille documents, attend appointments with you, handle appeals if refused.</p>
+        <p><strong>Key permits:</strong> Guest Investor Visa (Vendégbefektetői), EU Blue Card (Kék Kártya), Employment Permit (Munkavállalási Engedély), Digital Nomad White Card (Fehér Kártya), Family Reunification, LSZT (long-stay visa).</p>
+        <p><strong>Fee range:</strong> HUF 200,000–600,000 per person; €2,000–5,000 for Golden Visa. <a href="/tools/legal-cost-calculator/">Full cost calculator &rarr;</a></p>
+        <a href="/practice-areas/immigration/" style="color:var(--country-primary);font-weight:600">→ View Immigration Lawyers in Hungary</a> &nbsp; <a href="/practice-areas/golden-visa/" style="color:var(--country-primary);font-weight:600">→ Golden Visa Specialists</a>
+      </div>
+
+      <div id="result-employment" class="dt-result">
+        <h3>You need: Munkajogász (Employment Lawyer)</h3>
+        <p><strong>Why important:</strong> Hungarian employment law (<em>Munka Törvénykönyve</em> — Act I of 2012 on the Labour Code) sets strict rules on termination, notice periods, and redundancy pay. Employment disputes go to the Labour Court (<em>Munkaügyi Bíróság</em>), a specialist section of the Civil Court. The time limit to bring an employment claim is <strong>3 years</strong> for most claims (shorter for unfair dismissal: 30 days for the employer; 1 year for the employee from the date of knowledge of the infringement).</p>
+        <p><strong>What they do:</strong> Review employment contracts for compliance with Hungarian law, advise on termination (azonnali hatályú felmondás vs. felmondás), represent in Labour Court proceedings, draft collective agreements.</p>
+        <p><strong>Key law:</strong> Act I of 2012 (Munka Törvénykönyve); Government Decree 299/2011 on posted workers implementing Directive 96/71/EC.</p>
+        <a href="/practice-areas/employment/" style="color:var(--country-primary);font-weight:600">→ View Employment Lawyers in Hungary</a>
+      </div>
+
+      <div id="result-family" class="dt-result">
+        <h3>You need: Családjogi Ügyvéd (Family Lawyer)</h3>
+        <p><strong>Why important:</strong> Family law in Hungary is governed by the Civil Code (Ptk., Act V of 2013, Book IV on Family Law). International divorces involving non-Hungarian spouses are subject to EU Regulation 1259/2010 (Rome III — choice of applicable law for divorce). Cross-border child custody disputes fall under EU Regulation 2201/2003 (Brussels IIa) or, where applicable, the 1980 Hague Child Abduction Convention (Hungary ratified 1986).</p>
+        <p><strong>What they do:</strong> Represent in divorce proceedings before the Hungarian Family Court (<em>Járásbíróság</em> — District Court), negotiate custody and child maintenance, handle international abduction proceedings via the Hague Convention network.</p>
+        <p><strong>Key law:</strong> Ptk. §§ 4:1–4:230 (Family Law); Act III of 1952 on Civil Procedure (as amended); EU Brussels IIa Regulation 2201/2003.</p>
+        <a href="/practice-areas/family-law/" style="color:var(--country-primary);font-weight:600">→ View Family Lawyers in Hungary</a>
+      </div>
+
+      <div id="result-criminal" class="dt-result">
+        <h3>You need: Büntetőjogi Védőügyvéd (Criminal Defence Lawyer)</h3>
+        <p><strong>Why important:</strong> If you are arrested or questioned as a suspect in Hungary, you have the right to a lawyer before any questioning (Act XC of 2017 on Criminal Procedure, § 42). If you cannot afford a lawyer, the State provides a court-appointed defender (<em>kirendelt védő</em>), but in serious matters you should instruct your own. <strong>Do not make a statement without a lawyer present.</strong></p>
+        <p><strong>What they do:</strong> Represent at police questioning and arrest, appear before the examining magistrate (<em>nyomozási bíró</em>), defend at trial in the Criminal Court (<em>Büntetőbíróság</em>), handle appeals to the Court of Appeal (<em>Ítélőtábla</em>) and Kúria (Supreme Court).</p>
+        <p><strong>Emergency contact:</strong> Budapesti Ügyvédi Kamara duty lawyer service: +36 1 353 0240</p>
+        <a href="/practice-areas/criminal-law/" style="color:var(--country-primary);font-weight:600">→ View Criminal Defence Lawyers in Hungary</a>
+      </div>
+
+      <div id="result-dispute" class="dt-result">
+        <h3>You need: Polgári Peres Ügyvéd (Commercial Dispute / Litigation Lawyer)</h3>
+        <p><strong>Why important:</strong> Hungarian civil procedure (Act CXXX of 2016 on Civil Procedure — Pp.) requires legal representation in cases above HUF 1,000,000 value before the Törvényszék (Regional Court) and higher. Smaller claims can be handled without a lawyer in the Járásbíróság (District Court). Debt recovery has a simplified <em>fizetési meghagyás</em> (payment order) procedure administered by notaries — faster than court action for undisputed debts.</p>
+        <p><strong>What they do:</strong> Draft and file the statement of claim (<em>keresetlevél</em>), represent at hearings, instruct experts, enforce judgments via bailiff (<em>bírósági végrehajtó</em>).</p>
+        <p><strong>Arbitration:</strong> The Permanent Court of Arbitration attached to the Hungarian Chamber of Commerce and Industry (MKIK) is widely used for B2B disputes under Hungarian law.</p>
+        <a href="/practice-areas/dispute-resolution/" style="color:var(--country-primary);font-weight:600">→ View Dispute Resolution Lawyers in Hungary</a>
+      </div>
+
+      <div id="result-gdpr" class="dt-result">
+        <h3>You need: Adatvédelmi Ügyvéd (GDPR / Data Protection Lawyer)</h3>
+        <p><strong>Why important:</strong> GDPR (Regulation EU 2016/679) is directly applicable in Hungary; the national implementing law is Act CXII of 2011 on the Right to Informational Self-Determination and Freedom of Information (Infotv.), as amended. The supervisory authority is the Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH). NAIH has issued fines of up to HUF 500 million for serious GDPR violations.</p>
+        <p><strong>What they do:</strong> Conduct DPIA (Data Protection Impact Assessment), draft privacy policies and cookie notices, represent in NAIH investigations, advise on lawful bases for processing, handle data subject access requests.</p>
+        <p><strong>Notable Hungarian NAIH decision:</strong> NAIH-3426/2020 — fine of HUF 100M against a major Hungarian employer for unlawful employee monitoring (email scanning) without a valid legal basis under GDPR Art. 6.</p>
+        <a href="/practice-areas/data-protection/" style="color:var(--country-primary);font-weight:600">→ View Data Protection Lawyers in Hungary</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 2: How to Verify -->
+  <section aria-labelledby="verify-heading" style="margin-top:2rem">
+    <h2 id="verify-heading" style="color:var(--country-primary)">Step 2: How to Verify a Hungarian Lawyer</h2>
+    <div class="lawyer-type-grid">
+      <div class="lawyer-type-card">
+        <h4>🔍 Check Bar Registration</h4>
+        <p style="font-size:.9rem">Search <a href="https://www.magyarugyvedikamara.hu" target="_blank" rel="noopener">magyarugyvedikamara.hu</a> — free public register. A registered ügyvéd has an active kamarai szám. Unregistered practice of law is a criminal offence.</p>
+      </div>
+      <div class="lawyer-type-card">
+        <h4>🌐 Check Language Skills</h4>
+        <p style="font-size:.9rem">For English-speaking clients, verify the lawyer works in English — not just "has basic English." Ask for a brief email exchange before booking a consultation.</p>
+      </div>
+      <div class="lawyer-type-card">
+        <h4>📚 Check Specialisation</h4>
+        <p style="font-size:.9rem">Hungary has no formal lawyer specialisation certifications. Check the firm's website, recent deals, and ask direct questions: "How many property transactions did you handle last year?"</p>
+      </div>
+      <div class="lawyer-type-card">
+        <h4>🤝 Check References</h4>
+        <p style="font-size:.9rem">Ask for 2–3 client references in your language. Reputable firms serving expats are comfortable providing these. Check Google reviews for the ügyvédi iroda.</p>
+      </div>
+      <div class="lawyer-type-card">
+        <h4>💬 Initial Consultation</h4>
+        <p style="font-size:.9rem">Many Budapest firms offer a free 30-min initial consultation. Use it to assess communication, responsiveness, and whether they understand your specific situation.</p>
+      </div>
+      <div class="lawyer-type-card">
+        <h4>📄 Retainer Letter</h4>
+        <p style="font-size:.9rem">Never proceed without a written retainer confirming scope, fees, and timelines. <a href="/tools/nda-template/#retainer">See our retainer template &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 3: Due Diligence Checklist -->
+  <section aria-labelledby="checklist-heading" style="margin-top:2rem">
+    <h2 id="checklist-heading" style="color:var(--country-primary)">Step 3: Pre-Instruction Checklist</h2>
+    <div class="checklist-box">
+      <h3>Before signing a retainer with a Hungarian ügyvéd:</h3>
+      <div class="checklist-item"><input type="checkbox" id="c1" aria-label="Verify bar registration"><label for="c1">Verified bar registration at magyarugyvedikamara.hu</label></div>
+      <div class="checklist-item"><input type="checkbox" id="c2" aria-label="Confirmed English proficiency"><label for="c2">Confirmed English proficiency via email or call</label></div>
+      <div class="checklist-item"><input type="checkbox" id="c3" aria-label="Confirmed specialisation relevant to my matter"><label for="c3">Confirmed specialisation relevant to my matter</label></div>
+      <div class="checklist-item"><input type="checkbox" id="c4" aria-label="Received itemised fee quote"><label for="c4">Received itemised fee quote in writing (fixed, hourly, or % clearly stated)</label></div>
+      <div class="checklist-item"><input type="checkbox" id="c5" aria-label="Confirmed VAT treatment"><label for="c5">Confirmed whether fees are quoted inclusive or exclusive of 27% ÁFA</label></div>
+      <div class="checklist-item"><input type="checkbox" id="c6" aria-label="Received written retainer letter"><label for="c6">Received and reviewed written retainer / engagement letter</label></div>
+      <div class="checklist-item"><input type="checkbox" id="c7" aria-label="Understood KYC requirements"><label for="c7">Understood what KYC/AML documents the lawyer needs from me</label></div>
+      <div class="checklist-item"><input type="checkbox" id="c8" aria-label="Confirmed conflict of interest check"><label for="c8">Lawyer confirmed no conflict of interest in writing</label></div>
+      <div class="checklist-item"><input type="checkbox" id="c9" aria-label="Confirmed who will actually handle my matter"><label for="c9">Confirmed which lawyer (partner/associate) will actually handle my matter day-to-day</label></div>
+      <div class="checklist-item"><input type="checkbox" id="c10" aria-label="Understood complaints process"><label for="c10">Understood the complaints process (Bar Association / díjvita)</label></div>
+    </div>
+  </section>
+
+  <!-- Red Flags -->
+  <section aria-labelledby="redflags-heading" style="margin-top:2rem">
+    <h2 id="redflags-heading" style="color:var(--country-primary)">Red Flags — When to Walk Away</h2>
+    <div class="red-flag">🚩 <strong>No written retainer offered</strong> — any reputable Hungarian ügyvéd will provide a written engagement letter. If they refuse or delay, walk away.</div>
+    <div class="red-flag">🚩 <strong>Pressure to sign quickly</strong> — legitimate lawyers do not pressure clients. "The deal will fall through if you don't sign today" is a sales tactic, not legal advice.</div>
+    <div class="red-flag">🚩 <strong>Cannot be found on the Bar register</strong> — if their name doesn't appear at magyarugyvedikamara.hu, they are not licensed to practise law in Hungary. Do not proceed.</div>
+    <div class="red-flag">🚩 <strong>Vague or verbal fees only</strong> — if they will not put fees in writing before you instruct, you have no protection if they overcharge. Always get the fee in writing before work starts.</div>
+    <div class="red-flag">🚩 <strong>Suggests using their recommended notary for both parties</strong> — while not illegal, a notary (közjegyző) acts for both parties and cannot give partisan advice. For significant transactions, use a separate ügyvéd who acts only for you.</div>
+    <div class="red-flag">🚩 <strong>Guarantees outcomes</strong> — no honest lawyer can guarantee a court outcome, a successful visa application, or a property title being clean. If they promise certainty, they are misleading you.</div>
+    <div class="red-flag">🚩 <strong>Unresponsive before you've even instructed</strong> — if they take 5+ days to reply to a consultation enquiry, imagine how they'll behave once they have your retainer. Responsiveness is a proxy for quality.</div>
+  </section>
+
+  <!-- Case Studies -->
+  <section aria-labelledby="cases-heading" style="margin-top:2rem">
+    <h2 id="cases-heading" style="color:var(--country-primary)">Case Studies: Common Legal Situations in Hungary</h2>
+
+    <div class="case-study">
+      <h3>Case 1: British Expat Discovers Encumbrance After Property Purchase</h3>
+      <p><strong>Situation:</strong> A British retiree purchased a flat in Budapest XI. district for HUF 60M. He used the seller's recommended ügyvéd to save money. Post-purchase, he discovered a HUF 8M bank mortgage (<em>jelzálogjog</em>) registered on the property that had not been discharged at completion.</p>
+      <p><strong>What went wrong:</strong> The shared ügyvéd had a conflict of interest — prioritising deal completion over the buyer's due diligence. A buyer-side ügyvéd would have ordered a <em>tulajdoni lap</em> (land register extract) confirming all encumbrances before the completion date and made discharge a condition precedent.</p>
+      <p><strong>Legal outcome:</strong> Under Ptk. § 5:118, the buyer had a claim against the seller for the undisclosed mortgage. The case settled after 18 months of litigation for HUF 6M — but legal costs consumed most of the recovery.</p>
+      <div class="case-ref">📚 Relevant law: Ptk. §§ 5:118 (encumbrance liability), 6:142 (damages), Act CXLI of 1997 on Land Registry (Ingatlan-nyilvántartásról szóló törvény) §§ 1–20</div>
+      <p><strong>Lesson:</strong> Always instruct your own ügyvéd — not the seller's — for any property purchase in Hungary.</p>
+    </div>
+
+    <div class="case-study">
+      <h3>Case 2: German Company's Kft. Rejected at Registration</h3>
+      <p><strong>Situation:</strong> A German GmbH formed a Hungarian Kft. subsidiary using online model articles (simplified procedure) to save on lawyer fees. The articles named a German resident as sole director. The Cégbíróság rejected the registration because the simplified procedure requires the director to have a Hungarian adóazonosító jel (tax ID) — which foreign nationals must first obtain from NAV separately.</p>
+      <p><strong>What went wrong:</strong> The simplified e-Cégeljárás procedure works smoothly for Hungarian residents but has hidden prerequisites for non-residents. An ügyvéd handling the standard procedure would have obtained the tax ID in parallel, saving 3 weeks of delay.</p>
+      <p><strong>Legal outcome:</strong> Delay in registration of the Hungarian branch caused missed contract deadlines — the German parent incurred €15,000 in penalties under a supply contract.</p>
+      <div class="case-ref">📚 Relevant law: Act V of 2006 on Company Registration (Cégtörvény) §§ 1–20; Act CL of 2017 on the Tax Administration (Art) — NAV registration requirements for foreign directors</div>
+      <p><strong>Lesson:</strong> Use a Hungarian ügyvéd for Kft. formation whenever a foreign party is involved — the cost (HUF 150–300k) is trivial compared to the risk of errors.</p>
+    </div>
+
+    <div class="case-study">
+      <h3>Case 3: US Citizen's Golden Visa Application Rejected — Investment Not Qualifying</h3>
+      <p><strong>Situation:</strong> A US national invested €250,000 in a Budapest property development marketed as a "Golden Visa fund". When applying for the Guest Investor Visa, his application was rejected — the fund was not listed by the Magyar Nemzeti Bank (MNB) as a qualifying investment fund under Government Decree 210/2024.</p>
+      <p><strong>What went wrong:</strong> The developer's marketing referred to the investment as "Golden Visa eligible" but the specific fund had not completed MNB listing at the time of investment. An immigration ügyvéd conducting due diligence before investment would have verified the MNB fund register.</p>
+      <p><strong>Legal outcome:</strong> The applicant recovered most of his investment under the fund's exit terms but was unable to obtain the Guest Investor Visa and had to exit Hungary. Dispute with the developer ongoing.</p>
+      <div class="case-ref">📚 Relevant law: Government Decree 210/2024. (VII.24.) on the Guest Investor Visa; Act CXX of 2001 on Capital Markets — MNB authorisation requirements for qualifying funds</div>
+      <p><strong>Lesson:</strong> Always verify Golden Visa investment eligibility with an immigration ügyvéd <em>before</em> transferring funds — not after.</p>
+    </div>
+  </section>
+
+  <div class="cta-bar">
+    <strong>Ready to find a verified Hungarian lawyer?</strong><br>
+    <span style="opacity:.9;font-size:.95rem">AvökatFinder connects you with English-speaking ügyvédi irodák across Hungary — screened, verified, free to search.</span>
+    <br><a href="/find-a-lawyer/">Find My Lawyer &rarr;</a>
+  </div>
+
+  <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+    <a href="/tools/legal-cost-calculator/" style="background:var(--country-primary);color:#fff;padding:.6rem 1.2rem;border-radius:5px;text-decoration:none;font-weight:600">💰 Legal Cost Calculator</a>
+    <a href="/tools/nda-template/" style="background:var(--country-primary);color:#fff;padding:.6rem 1.2rem;border-radius:5px;text-decoration:none;font-weight:600">📄 Free Legal Templates</a>
+    <a href="/glossary/" style="background:var(--country-primary);color:#fff;padding:.6rem 1.2rem;border-radius:5px;text-decoration:none;font-weight:600">📚 Hungarian Legal Glossary</a>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer" style="margin-top:3rem">
+  <div class="footer-inner">
+    <div class="footer-col"><strong>AvökatFinder Hungary</strong><ul><li><a href="/practice-areas/">Practice Areas</a></li><li><a href="/cities/">By City</a></li><li><a href="/glossary/">Legal Glossary</a></li></ul></div>
+    <div class="footer-col"><strong>Tools</strong><ul><li><a href="/tools/legal-cost-calculator/">Legal Cost Calculator</a></li><li><a href="/tools/nda-template/">Free Templates</a></li><li><a href="/tools/how-to-choose-a-lawyer/" aria-current="page">How to Choose a Lawyer</a></li></ul></div>
+    <div class="footer-col"><strong>Legal</strong><ul><li><a href="/about.html">About</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2025 AvökatFinder.</span><span>Informational content only. Not legal advice.</span></div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>
+function showResult(id){
+  document.querySelectorAll('.dt-result').forEach(r=>r.classList.remove('show'));
+  document.querySelectorAll('.dt-btn').forEach(b=>b.classList.remove('selected'));
+  document.getElementById('result-'+id).classList.add('show');
+  event.currentTarget.classList.add('selected');
+  document.getElementById('result-'+id).scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+</body>
+</html>

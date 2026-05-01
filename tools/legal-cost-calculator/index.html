@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hungary Legal Cost Calculator 2025 | Property, Company, Immigration | AvökatFinder</title>
+<meta name="description" content="Calculate exact legal costs for property purchases, company formation, and immigration in Hungary. Includes illeték, lawyer fees, land registry, VAT — updated 2025.">
+<link rel="canonical" href="https://hungary.avokatfinder.com/tools/legal-cost-calculator/">
+<meta property="og:title" content="Hungary Legal Cost Calculator 2025 | AvökatFinder">
+<meta property="og:description" content="Free interactive calculator for Hungarian property purchase costs, company formation fees, and immigration expenses.">
+<meta property="og:url" content="https://hungary.avokatfinder.com/tools/legal-cost-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://avokatfinder.com/og/hungary.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AvökatFinder","item":"https://avokatfinder.com/"},{"@type":"ListItem","position":2,"name":"Hungary","item":"https://hungary.avokatfinder.com/"},{"@type":"ListItem","position":3,"name":"Tools","item":"https://hungary.avokatfinder.com/tools/"},{"@type":"ListItem","position":4,"name":"Legal Cost Calculator","item":"https://hungary.avokatfinder.com/tools/legal-cost-calculator/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Hungary Legal Cost Calculator 2025","url":"https://hungary.avokatfinder.com/tools/legal-cost-calculator/","description":"Interactive calculator for Hungarian property, company formation, and immigration legal costs.","inLanguage":"en","publisher":{"@type":"Organization","name":"AvökatFinder","url":"https://avokatfinder.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the property transfer duty (illeték) in Hungary in 2025?","acceptedAnswer":{"@type":"Answer","text":"The standard property transfer duty (vagyonszerzési illeték) in Hungary is 4% of the market value. First-time buyers purchasing a primary residence under HUF 15 million pay 0% on the first HUF 15 million. CSOK (family housing subsidy) recipients may qualify for further reductions."}},{"@type":"Question","name":"How much does a lawyer cost for property purchase in Hungary?","acceptedAnswer":{"@type":"Answer","text":"Hungarian lawyers typically charge 0.5–1.5% of the property purchase price for conveyancing, subject to a minimum fee. For a HUF 50M property, expect HUF 250,000–750,000 in legal fees. The lawyer must countersign (ellenjegyez) the sale agreement for it to be registerable at the land registry."}},{"@type":"Question","name":"What does it cost to form a Kft. (LLC) in Hungary?","acceptedAnswer":{"@type":"Answer","text":"Minimum share capital: HUF 3,000,000. Court registration fee: HUF 50,000 (simplified procedure: free). Lawyer fee: HUF 150,000–350,000. Publication in the Official Gazette (Cégközlöny): HUF 25,000. Total typical cost: HUF 230,000–430,000 excluding share capital deposit."}},{"@type":"Question","name":"What are the costs for a Hungarian Golden Visa (Guest Investor)?","acceptedAnswer":{"@type":"Answer","text":"The Hungarian Guest Investor Visa (2024) requires one of: €250,000 in a qualifying real estate fund, €1,000,000 deposit in a Hungarian financial institution, or €500,000 donated to a Hungarian university foundation. Government processing fee: €110 per application. Lawyer fee for full application support: typically €2,000–5,000."}}]}</script>
+<link rel="stylesheet" href="/css/style.css">
+<style>
+:root{--country-primary:#CE2939;--country-secondary:#436F4D;}
+.calc-container{max-width:860px;margin:2rem auto;padding:0 1rem;}
+.calc-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.calc-tab{background:#f0f0f2;border:2px solid #ddd;border-radius:6px 6px 0 0;padding:.6rem 1.2rem;cursor:pointer;font-weight:600;font-size:.95rem;transition:all .2s;}
+.calc-tab.active{background:var(--country-primary);color:#fff;border-color:var(--country-primary);}
+.calc-panel{display:none;background:#fff;border:2px solid #ddd;border-radius:0 8px 8px 8px;padding:2rem;}
+.calc-panel.active{display:block;}
+.calc-field{margin-bottom:1.25rem;}
+.calc-field label{display:block;font-weight:600;margin-bottom:.35rem;font-size:.95rem;}
+.calc-field input[type=range]{width:100%;accent-color:var(--country-primary);}
+.calc-field .range-val{font-size:1.1rem;font-weight:700;color:var(--country-primary);}
+.calc-field select,.calc-field input[type=number]{width:100%;padding:.5rem .75rem;border:1.5px solid #ccc;border-radius:5px;font-size:1rem;}
+.results-box{background:#f0f7f0;border:2px solid var(--country-secondary);border-radius:8px;padding:1.5rem;margin-top:1.5rem;}
+.results-box h3{color:var(--country-secondary);margin-top:0;}
+.result-row{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid #dde;font-size:.95rem;}
+.result-row:last-child{border-bottom:none;font-weight:700;font-size:1.05rem;color:var(--country-primary);}
+.result-row.sub{color:#555;font-size:.9rem;}
+.disclaimer{background:#fff8e1;border-left:4px solid #f59e0b;padding:1rem 1.25rem;border-radius:0 6px 6px 0;margin-top:1.5rem;font-size:.85rem;color:#555;}
+.fee-table{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.9rem;}
+.fee-table th{background:var(--country-primary);color:#fff;padding:.5rem .75rem;text-align:left;}
+.fee-table td,.fee-table th{padding:.45rem .75rem;border-bottom:1px solid #eee;}
+.fee-table tr:nth-child(even){background:#f9f9fb;}
+.cta-bar{background:var(--country-primary);color:#fff;border-radius:8px;padding:1.5rem 2rem;margin-top:2rem;text-align:center;}
+.cta-bar a{background:#fff;color:var(--country-primary);font-weight:700;padding:.6rem 1.5rem;border-radius:5px;text-decoration:none;display:inline-block;margin-top:.5rem;}
+</style>
+<meta name="robots" content="index, follow">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="AvökatFinder" class="logo-img" width="60" height="28"><span class="logo-text">AvökatFinder <span>Hungary</span></span></a>
+    <button class="hamburger" aria-label="Open menu">&#9776;</button>
+    <nav>
+      <a href="/practice-areas/">Practice Areas</a>
+      <a href="/cities/">By City</a>
+      <a href="/blog/">Expat Guides</a>
+      <a href="/find-a-lawyer/">Find a Lawyer</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="calc-container">
+  <nav aria-label="Breadcrumb" style="font-size:.85rem;margin-bottom:1.5rem;">
+    <a href="/">AvökatFinder</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; Legal Cost Calculator
+  </nav>
+
+  <h1 style="color:var(--country-primary);margin-bottom:.5rem">Hungary Legal Cost Calculator 2025</h1>
+  <p style="margin-top:0;color:#555;max-width:680px">Estimate exact legal costs for property purchases, company formation, and immigration in Hungary. All figures based on current 2025 Hungarian law and market rates. <strong>Results are estimates — get a firm quote from a lawyer before committing.</strong></p>
+
+  <!-- Tab Navigation -->
+  <div class="calc-tabs" role="tablist" aria-label="Calculator type">
+    <button class="calc-tab active" role="tab" aria-selected="true" aria-controls="panel-property" onclick="switchTab('property',this)">🏠 Property Purchase</button>
+    <button class="calc-tab" role="tab" aria-selected="false" aria-controls="panel-company" onclick="switchTab('company',this)">🏢 Company Formation (Kft.)</button>
+    <button class="calc-tab" role="tab" aria-selected="false" aria-controls="panel-golden" onclick="switchTab('golden',this)">🌍 Golden Visa / Immigration</button>
+    <button class="calc-tab" role="tab" aria-selected="false" aria-controls="panel-fees" onclick="switchTab('fees',this)">📋 Lawyer Fee Guide</button>
+  </div>
+
+  <!-- Panel: Property Purchase -->
+  <div id="panel-property" class="calc-panel active" role="tabpanel" aria-label="Property purchase calculator">
+    <h2 style="color:var(--country-primary);margin-top:0">Property Purchase Cost Calculator</h2>
+
+    <div class="calc-field">
+      <label for="prop-price">Purchase Price</label>
+      <input type="range" id="prop-price-slider" min="5000000" max="500000000" step="1000000" value="50000000" oninput="updatePropCalc()">
+      <div class="range-val"><span id="prop-price-display">HUF 50,000,000</span> <span style="color:#888;font-weight:400;font-size:.9rem">(≈ €125,000)</span></div>
+    </div>
+
+    <div class="calc-field">
+      <label for="prop-type">Property Type</label>
+      <select id="prop-type" onchange="updatePropCalc()">
+        <option value="resale">Resale (used property)</option>
+        <option value="newbuild">New Build (első lakás)</option>
+        <option value="land">Land / Building Plot</option>
+      </select>
+    </div>
+
+    <div class="calc-field">
+      <label for="prop-buyer">Buyer Status</label>
+      <select id="prop-buyer" onchange="updatePropCalc()">
+        <option value="standard">Standard buyer (second home / non-resident)</option>
+        <option value="firsttime">First-time buyer (primary residence)</option>
+        <option value="csok">CSOK recipient (family housing subsidy)</option>
+      </select>
+    </div>
+
+    <div class="calc-field">
+      <label for="lawyer-rate">Lawyer Fee Rate (%)</label>
+      <select id="lawyer-rate" onchange="updatePropCalc()">
+        <option value="0.5">0.5% (minimum / simple transaction)</option>
+        <option value="0.8" selected>0.8% (typical market rate)</option>
+        <option value="1.0">1.0% (complex / luxury property)</option>
+        <option value="1.5">1.5% (international transaction / premium firm)</option>
+      </select>
+    </div>
+
+    <div class="results-box">
+      <h3>Estimated Costs Breakdown</h3>
+      <div id="prop-results"></div>
+    </div>
+
+    <div style="margin-top:1.5rem">
+      <h3>What each cost covers</h3>
+      <table class="fee-table" aria-label="Property purchase cost explanation">
+        <thead><tr><th>Cost Item</th><th>Rate</th><th>Legal Basis</th><th>Who Pays</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Vagyonszerzési illeték</strong> (property transfer duty)</td><td>4% of market value</td><td>Act XCIII of 1990 on Duties, §2</td><td>Buyer</td></tr>
+          <tr><td>First-time buyer illeték exemption</td><td>0% on first HUF 15M</td><td>Act XCIII of 1990, §26(1)(g)</td><td>Buyer (benefit)</td></tr>
+          <tr><td>CSOK reduced illeték</td><td>0% (full exemption)</td><td>Government Decree 16/2016 (II.10.)</td><td>Buyer (benefit)</td></tr>
+          <tr><td>Lawyer countersignature (ellenjegyzés)</td><td>0.5–1.5% (negotiable)</td><td>Act LXXXIV of 2007 on Lawyers</td><td>Buyer (usually)</td></tr>
+          <tr><td>Land registry registration fee</td><td>HUF 6,600</td><td>Government Decree 22/2013. (VI.26.)</td><td>Buyer</td></tr>
+          <tr><td>Land registry urgency surcharge</td><td>HUF 10,000</td><td>Optional — 15-day fast-track</td><td>Buyer (optional)</td></tr>
+          <tr><td>VAT on new build (ÁFA)</td><td>5% (under 150m²) or 27%</td><td>Act CXXVII of 2007 (ÁFA tv.) §86</td><td>Buyer (to developer)</td></tr>
+          <tr><td>Energy certificate (ETA)</td><td>HUF 30,000–80,000</td><td>Government Decree 176/2008</td><td>Seller (mandatory)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="disclaimer" role="note" aria-label="Calculator disclaimer">
+      <strong>⚠ Important:</strong> This calculator provides estimates based on standard 2025 rates. Illeték is assessed by NAV (Hungarian Tax Authority) on the <em>forgalmi értéken</em> (market value), which may differ from the purchase price. CSOK and first-time buyer benefits require formal application. Always confirm with a qualified Hungarian ügyvéd (lawyer) before transacting.
+    </div>
+  </div>
+
+  <!-- Panel: Company Formation -->
+  <div id="panel-company" class="calc-panel" role="tabpanel" aria-label="Company formation calculator">
+    <h2 style="color:var(--country-primary);margin-top:0">Kft. (LLC) Formation Cost Calculator</h2>
+
+    <div class="calc-field">
+      <label for="share-capital">Share Capital (Törzstőke)</label>
+      <input type="range" id="share-capital-slider" min="3000000" max="100000000" step="500000" value="3000000" oninput="updateCompanyCalc()">
+      <div class="range-val"><span id="share-capital-display">HUF 3,000,000</span> <span style="color:#888;font-weight:400;font-size:.9rem">(minimum required)</span></div>
+    </div>
+
+    <div class="calc-field">
+      <label for="company-type">Formation Route</label>
+      <select id="company-type" onchange="updateCompanyCalc()">
+        <option value="simplified">Simplified (model articles — egyszerűsített)</option>
+        <option value="standard" selected>Standard (custom articles — egyedi)</option>
+        <option value="complex">Complex (foreign shareholder / multi-party)</option>
+      </select>
+    </div>
+
+    <div class="calc-field">
+      <label for="registered-office">Registered Office Arrangement</label>
+      <select id="registered-office" onchange="updateCompanyCalc()">
+        <option value="own">Own premises (no cost)</option>
+        <option value="virtual" selected>Virtual office service (annual)</option>
+        <option value="lawyer">Lawyer's address (included in fee)</option>
+      </select>
+    </div>
+
+    <div class="results-box">
+      <h3>Estimated Formation Costs</h3>
+      <div id="company-results"></div>
+    </div>
+
+    <div style="margin-top:1.5rem">
+      <h3>Kft. Formation — Fee Structure Reference</h3>
+      <table class="fee-table" aria-label="Company formation costs">
+        <thead><tr><th>Item</th><th>Simplified</th><th>Standard</th><th>Complex</th></tr></thead>
+        <tbody>
+          <tr><td>Court registration fee (Cégbírósági illeték)</td><td>Free (0)</td><td>HUF 50,000</td><td>HUF 50,000</td></tr>
+          <tr><td>Publication fee (Cégközlöny)</td><td>HUF 25,000</td><td>HUF 25,000</td><td>HUF 25,000</td></tr>
+          <tr><td>Lawyer drafting fee (ügyvédi munkadíj)</td><td>HUF 80,000–150,000</td><td>HUF 150,000–300,000</td><td>HUF 300,000–600,000</td></tr>
+          <tr><td>Virtual office (annual)</td><td>HUF 60,000–120,000</td><td>HUF 60,000–120,000</td><td>HUF 120,000–240,000</td></tr>
+          <tr><td>Tax registration (KATA/VAT/TEÁOR)</td><td>Free</td><td>Free</td><td>Free</td></tr>
+          <tr><td>Bank account opening deposit</td><td>Min. HUF 300,000</td><td>Min. HUF 300,000</td><td>Min. HUF 300,000</td></tr>
+          <tr><td><strong>Minimum share capital</strong></td><td colspan="3"><strong>HUF 3,000,000</strong> (must be deposited before registration)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:1.5rem">
+      <h3>Key Hungarian Company Law Facts</h3>
+      <ul>
+        <li><strong>Legal basis:</strong> Act V of 2013 on the Civil Code (Ptk.) — company law chapters; Act V of 2006 on Company Registration and Publicity</li>
+        <li><strong>Registered agent requirement:</strong> A Hungarian ügyvéd must countersign the deed of incorporation (<em>alapítási okirat</em>) and file with the Court of Registration (Cégbíróság)</li>
+        <li><strong>Timeline:</strong> Simplified route: 1–3 business days. Standard: 5–15 business days. Complex (foreign parent, apostille required): 3–6 weeks</li>
+        <li><strong>Foreign shareholders:</strong> No restriction — 100% foreign ownership permitted. Director must have a Hungarian tax ID (adóazonosító jel)</li>
+        <li><strong>Annual accounts:</strong> Filed with Cégbíróság within 150 days of financial year-end. Accountant (könyvelő) required: HUF 20,000–80,000/month</li>
+      </ul>
+    </div>
+
+    <div id="company-results-detail"></div>
+
+    <div class="disclaimer" role="note">
+      <strong>⚠ Important:</strong> Share capital must be deposited into a Hungarian bank account before registration. The Cégbíróság (Court of Registration) processes filings electronically via the Hungarian Electronic Company System (e-Cégeljárás). Simplified formation uses model articles and cannot be customised; for any non-standard shareholding structure use the standard route.
+    </div>
+  </div>
+
+  <!-- Panel: Golden Visa / Immigration -->
+  <div id="panel-golden" class="calc-panel" role="tabpanel" aria-label="Immigration cost calculator">
+    <h2 style="color:var(--country-primary);margin-top:0">Hungarian Golden Visa &amp; Immigration Cost Guide</h2>
+
+    <div class="calc-field">
+      <label for="visa-type">Visa / Permit Type</label>
+      <select id="visa-type" onchange="updateGoldenCalc()">
+        <option value="guest">Guest Investor Visa (Vendégbefektetői vízum) — 2024</option>
+        <option value="bluecard">EU Blue Card (Kék kártya)</option>
+        <option value="employment">Employment Permit (Munkavállalási engedély)</option>
+        <option value="digital">Digital Nomad / White Card (Fehér kártya)</option>
+        <option value="family">Family Reunification (Családegyesítés)</option>
+      </select>
+    </div>
+
+    <div class="calc-field">
+      <label for="visa-track">Application Track</label>
+      <select id="visa-track" onchange="updateGoldenCalc()">
+        <option value="self">Self-prepared (no lawyer)</option>
+        <option value="lawyer">With immigration lawyer support</option>
+      </select>
+    </div>
+
+    <div class="results-box">
+      <h3>Estimated Immigration Costs</h3>
+      <div id="golden-results"></div>
+    </div>
+
+    <div style="margin-top:1.5rem">
+      <h3>Hungarian Guest Investor Visa — Full Requirements (2025)</h3>
+      <table class="fee-table" aria-label="Guest Investor Visa requirements and costs">
+        <thead><tr><th>Requirement</th><th>Threshold</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Option A: Real estate fund investment</td><td>€250,000 minimum</td><td>Qualifying fund must be listed by Supervisory Authority (MNB); 5-year lock-up</td></tr>
+          <tr><td>Option B: Financial institution deposit</td><td>€1,000,000</td><td>Deposit in Hungarian financial institution; minimum 5-year term</td></tr>
+          <tr><td>Option C: University foundation donation</td><td>€500,000</td><td>Donation to designated Hungarian higher education foundation</td></tr>
+          <tr><td>Government processing fee</td><td>€110 per person</td><td>Non-refundable; family members apply separately</td></tr>
+          <tr><td>Biometric appointment (consulate)</td><td>Free–€30</td><td>Varies by consulate location</td></tr>
+          <tr><td>Lawyer fee (immigration support)</td><td>€2,000–5,000</td><td>For full application preparation and submission; higher for complex family structures</td></tr>
+          <tr><td>Translation / apostille (per document)</td><td>€50–200</td><td>All documents must be official Hungarian translation by certified translator</td></tr>
+          <tr><td>Health insurance (annual)</td><td>€500–2,000</td><td>Comprehensive coverage required during application period</td></tr>
+          <tr><td>Permit validity</td><td>10 years (renewable)</td><td>No physical presence requirement; no path to citizenship via this route</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top:1.5rem">EU Blue Card Hungary — Key Facts</h3>
+      <table class="fee-table" aria-label="EU Blue Card Hungary costs">
+        <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Minimum gross salary requirement</td><td>1.5x Hungarian average (≈ HUF 680,000/month gross in 2025)</td></tr>
+          <tr><td>Qualification requirement</td><td>University degree (bachelor's+) or 5 years equivalent experience</td></tr>
+          <tr><td>Processing fee</td><td>HUF 25,000 (≈ €60)</td></tr>
+          <tr><td>Processing time</td><td>30–90 days via immigration authority (OIF/OIN)</td></tr>
+          <tr><td>Lawyer fee</td><td>HUF 200,000–400,000 for full support</td></tr>
+          <tr><td>Validity</td><td>Up to 4 years (or contract duration +3 months)</td></tr>
+          <tr><td>Legal basis</td><td>Government Decree 419/2012. (XII.29.) implementing EU Directive 2009/50/EC</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="disclaimer" role="note">
+      <strong>⚠ Important:</strong> The Guest Investor Visa was introduced by Government Decree 210/2024. (VII.24.) with effect from 1 July 2024. Qualifying funds are listed by the Magyar Nemzeti Bank (MNB — Hungarian Central Bank). Immigration rules change frequently — always verify current requirements with an immigration ügyvéd before making investment commitments.
+    </div>
+  </div>
+
+  <!-- Panel: Fee Guide -->
+  <div id="panel-fees" class="calc-panel" role="tabpanel" aria-label="Lawyer fee guide">
+    <h2 style="color:var(--country-primary);margin-top:0">Hungarian Lawyer Fee Guide by Practice Area</h2>
+    <p>Hungary abolished mandatory minimum fee scales in 2014 (in line with EU competition rules). The following are <strong>realistic market ranges</strong> based on 2024–2025 data for English-speaking firms in Budapest and major cities.</p>
+
+    <h3>Fee Structures Used in Hungary</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem">
+      <div style="background:#f9f9fb;padding:1rem;border-radius:8px;border-top:3px solid var(--country-primary)">
+        <strong>Hourly Rate</strong><br><small>Most common for advisory, dispute, corporate</small><br><br>Budapest senior partner: <strong>HUF 60,000–120,000/hr</strong><br>Budapest associate: <strong>HUF 30,000–60,000/hr</strong><br>Regional firms: <strong>HUF 20,000–50,000/hr</strong>
+      </div>
+      <div style="background:#f9f9fb;padding:1rem;border-radius:8px;border-top:3px solid var(--country-primary)">
+        <strong>Fixed Fee</strong><br><small>Common for conveyancing, Kft. formation, immigration</small><br><br>Simple conveyancing: <strong>HUF 150,000–400,000</strong><br>Kft. formation: <strong>HUF 100,000–350,000</strong><br>Immigration permit: <strong>HUF 200,000–500,000</strong>
+      </div>
+      <div style="background:#f9f9fb;padding:1rem;border-radius:8px;border-top:3px solid var(--country-primary)">
+        <strong>% of Value</strong><br><small>Standard for property conveyancing</small><br><br>Conveyancing: <strong>0.5–1.5%</strong> of property price<br>M&amp;A: <strong>0.3–1.0%</strong> of deal value<br>Debt recovery: <strong>10–25%</strong> of amount recovered
+      </div>
+      <div style="background:#f9f9fb;padding:1rem;border-radius:8px;border-top:3px solid var(--country-primary)">
+        <strong>Retainer</strong><br><small>For ongoing advisory relationships</small><br><br>SME monthly retainer: <strong>HUF 80,000–200,000/month</strong><br>Multinational retainer: <strong>HUF 300,000–800,000/month</strong><br>Includes set hours; excess billed hourly
+      </div>
+    </div>
+
+    <h3>Fee Ranges by Practice Area</h3>
+    <table class="fee-table" aria-label="Hungarian lawyer fees by practice area 2025">
+      <thead><tr><th>Practice Area</th><th>Typical Fee Structure</th><th>Low End</th><th>High End</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Property Conveyancing</strong></td><td>% of price</td><td>0.5% (min ~HUF 150k)</td><td>1.5% of price</td><td>Lawyer countersignature legally required</td></tr>
+        <tr><td><strong>Real Estate Due Diligence</strong></td><td>Fixed or hourly</td><td>HUF 100,000</td><td>HUF 500,000+</td><td>Per property; complex titles higher</td></tr>
+        <tr><td><strong>Company Formation (Kft.)</strong></td><td>Fixed fee</td><td>HUF 100,000</td><td>HUF 400,000</td><td>Excludes share capital and fees</td></tr>
+        <tr><td><strong>M&amp;A / Share Purchase</strong></td><td>% of deal + hours</td><td>HUF 500,000</td><td>HUF 5,000,000+</td><td>Below €1M deals: fixed; above: % of deal</td></tr>
+        <tr><td><strong>Employment (contract)</strong></td><td>Fixed / hourly</td><td>HUF 80,000</td><td>HUF 300,000</td><td>Per employment contract or staff handbook</td></tr>
+        <tr><td><strong>Employment Dispute</strong></td><td>Hourly + contingency</td><td>HUF 150,000</td><td>HUF 800,000+</td><td>Tribunal representation; % if contingency</td></tr>
+        <tr><td><strong>Immigration (permit)</strong></td><td>Fixed fee</td><td>HUF 200,000</td><td>HUF 600,000</td><td>Per person; family discount common</td></tr>
+        <tr><td><strong>Golden Visa Application</strong></td><td>Fixed fee</td><td>€2,000</td><td>€5,000</td><td>Excludes investment amount; EUR-denominated</td></tr>
+        <tr><td><strong>Family Law (divorce)</strong></td><td>Hourly</td><td>HUF 200,000</td><td>HUF 2,000,000+</td><td>Highly variable; contested cases expensive</td></tr>
+        <tr><td><strong>Criminal Defence</strong></td><td>Fixed + daily hearing rate</td><td>HUF 300,000</td><td>HUF 5,000,000+</td><td>Pre-trial: fixed; trial: daily rate</td></tr>
+        <tr><td><strong>GDPR / Data Protection</strong></td><td>Fixed or retainer</td><td>HUF 200,000</td><td>HUF 1,000,000</td><td>DPIA, policy package, or monthly retainer</td></tr>
+        <tr><td><strong>IP Registration (trademark)</strong></td><td>Fixed fee</td><td>HUF 150,000</td><td>HUF 400,000</td><td>Excludes HIPO filing fees (~HUF 70,000)</td></tr>
+        <tr><td><strong>Litigation (civil)</strong></td><td>Hourly</td><td>HUF 300,000</td><td>HUF 3,000,000+</td><td>First instance; appeals add 30–50%</td></tr>
+        <tr><td><strong>Tax Advisory</strong></td><td>Hourly or retainer</td><td>HUF 150,000</td><td>HUF 500,000/month</td><td>Tax lawyer (not accountant) for complex</td></tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:1.5rem">
+      <h3>What Drives Hungarian Lawyer Fees Up or Down</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+        <div style="background:#f0f7f0;padding:1rem;border-radius:6px">
+          <strong style="color:var(--country-secondary)">✓ Factors that REDUCE fees</strong>
+          <ul style="margin:.5rem 0 0;padding-left:1.2rem;font-size:.9rem">
+            <li>Simple, standard transaction (model articles Kft., standard property purchase)</li>
+            <li>Existing client relationship (repeat business discount)</li>
+            <li>Documents already prepared / translated</li>
+            <li>Regional firm outside Budapest (20–40% cheaper)</li>
+            <li>Online / simplified procedure (e-Cégeljárás)</li>
+          </ul>
+        </div>
+        <div style="background:#fff5f5;padding:1rem;border-radius:6px">
+          <strong style="color:var(--country-primary)">✗ Factors that INCREASE fees</strong>
+          <ul style="margin:.5rem 0 0;padding-left:1.2rem;font-size:.9rem">
+            <li>Foreign party involvement (apostilles, translation, multi-jurisdiction)</li>
+            <li>Title defects or encumbrances on property</li>
+            <li>Urgency / expedited delivery</li>
+            <li>Contested proceedings (litigation, divorce)</li>
+            <li>High-value transaction (% fees on luxury property or M&A)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer" role="note">
+      <strong>Source note:</strong> Fee ranges compiled from publicly disclosed fee structures, Hungarian Bar Association (Magyar Ügyvédi Kamara) guidance, and market surveys of English-speaking Budapest firms (2024–2025). Hungary abolished mandatory minimum fees under Act LXXXIV of 2007 as amended. VAT (ÁFA) at 27% applies to lawyer services for business clients.
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-bar">
+    <strong style="font-size:1.1rem">Need a firm quote? Talk to a verified Hungarian lawyer.</strong><br>
+    <span style="font-size:.95rem;opacity:.9">AvökatFinder connects you with English-speaking ügyvédi irodák (law offices) across Hungary — free to search, no registration required.</span>
+    <br><a href="/find-a-lawyer/">Find My Lawyer in 60 Seconds &rarr;</a>
+  </div>
+
+  <!-- Case Study Callout -->
+  <section aria-label="Case study: property purchase cost example" style="background:#f9f9fb;border:1px solid #ddd;border-radius:8px;padding:1.5rem;margin-top:2rem">
+    <h2 style="color:var(--country-primary);margin-top:0;font-size:1.15rem">📋 Real-World Example: British Family Buying in Budapest (2024)</h2>
+    <p><strong>Facts:</strong> A British couple purchases a used apartment in Budapest II. district for HUF 85,000,000 (≈ €215,000). Second home; neither is a Hungarian first-time buyer. Post-Brexit, they need a permesso di soggiorno equivalent (Hungarian tartózkodási engedély) to use the property long-term.</p>
+    <table class="fee-table">
+      <thead><tr><th>Cost Item</th><th>Calculation</th><th>Amount</th></tr></thead>
+      <tbody>
+        <tr><td>Vagyonszerzési illeték (4%)</td><td>HUF 85,000,000 × 4%</td><td><strong>HUF 3,400,000</strong></td></tr>
+        <tr><td>Lawyer fee (0.8%)</td><td>HUF 85,000,000 × 0.8%</td><td><strong>HUF 680,000</strong></td></tr>
+        <tr><td>Land registry fee</td><td>Fixed</td><td><strong>HUF 6,600</strong></td></tr>
+        <tr><td>Translation of UK documents</td><td>4 documents × HUF 25,000</td><td><strong>HUF 100,000</strong></td></tr>
+        <tr><td>Immigration permit (2 persons)</td><td>HUF 300,000 per person</td><td><strong>HUF 600,000</strong></td></tr>
+        <tr><td style="font-weight:700" colspan="2">Total additional costs above purchase price</td><td style="font-weight:700;color:var(--country-primary)">HUF 4,786,600<br><small>(≈ €12,000 / 5.6% of price)</small></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.85rem;color:#555;margin-bottom:0"><em>Note: NAV (tax authority) may assess illeték on a different market value than the purchase price. The figures above assume purchase price equals market value. Your lawyer can advise on NAV assessment risk for the specific property.</em></p>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-footer" style="margin-top:3rem">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <strong>AvökatFinder Hungary</strong>
+      <ul><li><a href="/practice-areas/">Practice Areas</a></li><li><a href="/cities/">By City</a></li><li><a href="/blog/">Expat Guides</a></li><li><a href="/glossary/">Legal Glossary</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <strong>Tools</strong>
+      <ul><li><a href="/tools/legal-cost-calculator/" aria-current="page">Legal Cost Calculator</a></li><li><a href="/tools/nda-template/">Free NDA Template</a></li><li><a href="/tools/how-to-choose-a-lawyer/">How to Choose a Lawyer</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <strong>Legal</strong>
+      <ul><li><a href="/about.html">About</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 AvökatFinder. All rights reserved.</span>
+    <span>This calculator is for estimation purposes only. Not legal advice.</span>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>
+const FMT = new Intl.NumberFormat('hu-HU');
+const EUR_HUF = 395;
+
+function fmt(n){return 'HUF '+FMT.format(Math.round(n));}
+function fmtEUR(n){return '≈ €'+FMT.format(Math.round(n/EUR_HUF));}
+
+function switchTab(id, btn){
+  document.querySelectorAll('.calc-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.calc-tab').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});
+  document.getElementById('panel-'+id).classList.add('active');
+  btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+}
+
+function updatePropCalc(){
+  const price = parseFloat(document.getElementById('prop-price-slider').value);
+  const type  = document.getElementById('prop-type').value;
+  const buyer = document.getElementById('prop-buyer').value;
+  const rate  = parseFloat(document.getElementById('lawyer-rate').value);
+
+  document.getElementById('prop-price-display').textContent = fmt(price);
+
+  let illetek = price * 0.04;
+  let illetekNote = 'Standard 4%';
+
+  if(buyer === 'firsttime'){
+    const exempt = Math.min(price, 15000000);
+    illetek = (price - exempt) * 0.04;
+    illetekNote = '4% (first HUF 15M exempt for first-time buyer)';
+  } else if(buyer === 'csok'){
+    illetek = 0;
+    illetekNote = 'CSOK full exemption (0%)';
+  }
+
+  let vat = 0; let vatNote = '';
+  if(type === 'newbuild'){
+    vat = price * 0.05;
+    vatNote = '5% ÁFA (if residential ≤150m²)';
+  }
+
+  const lawyerFee = price * rate / 100;
+  const landReg = 6600;
+  const total = illetek + vat + lawyerFee + landReg;
+
+  document.getElementById('prop-results').innerHTML = `
+    <div class="result-row sub"><span>Purchase price</span><span>${fmt(price)} ${fmtEUR(price)}</span></div>
+    <div class="result-row"><span>Vagyonszerzési illeték (${illetekNote})</span><span>${fmt(illetak||illetek)}</span></div>
+    ${vat>0?`<div class="result-row"><span>ÁFA — ${vatNote}</span><span>${fmt(vat)}</span></div>`:''}
+    <div class="result-row"><span>Lawyer fee (ellenjegyzési díj) @ ${rate}%</span><span>${fmt(lawyerFee)}</span></div>
+    <div class="result-row sub"><span>Land registry fee (ingatlan-nyilvántartás)</span><span>${fmt(landReg)}</span></div>
+    <div class="result-row"><span>TOTAL ESTIMATED ADDITIONAL COSTS</span><span>${fmt(total)} ${fmtEUR(total)}</span></div>
+    <div class="result-row sub"><span>As % of purchase price</span><span>${(total/price*100).toFixed(2)}%</span></div>
+  `;
+}
+
+function updateCompanyCalc(){
+  const capital = parseFloat(document.getElementById('share-capital-slider').value);
+  const ctype   = document.getElementById('company-type').value;
+  const office  = document.getElementById('registered-office').value;
+
+  document.getElementById('share-capital-display').textContent = fmt(capital);
+
+  let courtFee = ctype==='simplified' ? 0 : 50000;
+  let pubFee   = 25000;
+  let lawyerLo = ctype==='simplified' ? 80000 : ctype==='standard' ? 150000 : 300000;
+  let lawyerHi = ctype==='simplified' ? 150000 : ctype==='standard' ? 300000 : 600000;
+  let officeFee = office==='virtual' ? 90000 : 0;
+
+  const loTotal = courtFee + pubFee + lawyerLo + officeFee;
+  const hiTotal = courtFee + pubFee + lawyerHi + officeFee;
+
+  document.getElementById('company-results').innerHTML = `
+    <div class="result-row sub"><span>Share capital (törzstőke) — separate bank deposit</span><span>${fmt(capital)}</span></div>
+    <div class="result-row"><span>Court registration fee (cégbírósági illeték)</span><span>${fmt(courtFee)}</span></div>
+    <div class="result-row"><span>Official Gazette publication (Cégközlöny)</span><span>${fmt(pubFee)}</span></div>
+    <div class="result-row"><span>Lawyer drafting fee (range)</span><span>${fmt(lawyerLo)} – ${fmt(lawyerHi)}</span></div>
+    ${officeFee>0?`<div class="result-row"><span>Virtual office service (annual)</span><span>${fmt(officeFee)}</span></div>`:''}
+    <div class="result-row"><span>TOTAL FORMATION COSTS (excl. share capital)</span><span>${fmt(loTotal)} – ${fmt(hiTotal)}</span></div>
+    <div class="result-row sub"><span>Total incl. share capital deposit</span><span>${fmt(capital+loTotal)} – ${fmt(capital+hiTotal)}</span></div>
+  `;
+}
+
+function updateGoldenCalc(){
+  const vtype = document.getElementById('visa-type').value;
+  const track = document.getElementById('visa-track').value;
+  const withLawyer = track === 'lawyer';
+
+  const data = {
+    guest:      { govt: '€110/person', lawyer: '€2,000–5,000', time: '60–120 days', invest: '€250k fund / €1M deposit / €500k donation', notes: 'No physical presence required; 10-year permit; no citizenship path via this route' },
+    bluecard:   { govt: 'HUF 25,000', lawyer: 'HUF 200,000–400,000', time: '30–90 days', invest: 'Job offer at 1.5× avg salary required', notes: 'University degree + qualifying offer required; valid up to 4 years' },
+    employment: { govt: 'HUF 18,000', lawyer: 'HUF 150,000–300,000', time: '15–45 days', invest: 'No investment required', notes: 'Employer-sponsored; labour market test may be required' },
+    digital:    { govt: 'HUF 25,000', lawyer: 'HUF 150,000–300,000', time: '21–60 days', invest: 'Proof of remote income ≥ HUF 300,000/month net', notes: 'Introduced 2024; valid 1 year, renewable once' },
+    family:     { govt: 'HUF 18,000', lawyer: 'HUF 100,000–250,000', time: '30–60 days', invest: 'Sponsor must have qualifying permit', notes: 'Sponsor must demonstrate sufficient accommodation and income' }
+  };
+
+  const d = data[vtype];
+  document.getElementById('golden-results').innerHTML = `
+    <div class="result-row"><span>Government processing fee</span><span>${d.govt}</span></div>
+    ${withLawyer?`<div class="result-row"><span>Immigration lawyer fee</span><span>${d.lawyer}</span></div>`:'<div class="result-row sub"><span>Lawyer fee</span><span>None (self-prepared)</span></div>'}
+    <div class="result-row"><span>Translation / apostille (estimate, 5 docs)</span><span>HUF 100,000–250,000</span></div>
+    <div class="result-row sub"><span>Investment requirement</span><span>${d.invest}</span></div>
+    <div class="result-row sub"><span>Processing time</span><span>${d.time}</span></div>
+    <div class="result-row sub" style="flex-direction:column;align-items:flex-start"><span style="color:#555;font-size:.85rem;margin-top:.5rem">📌 ${d.notes}</span></div>
+  `;
+}
+
+// Init all calculators
+document.addEventListener('DOMContentLoaded', ()=>{
+  updatePropCalc(); updateCompanyCalc(); updateGoldenCalc();
+});
+</script>
+</body>
+</html>

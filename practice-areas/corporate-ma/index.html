@@ -1235,6 +1235,140 @@
   <p>Browse our verified directory of law firms across Hungary's major cities. All listed firms offer English-language legal services to expats and foreign nationals.</p>
   <a href="/find-a-lawyer/" class="btn btn-white">Find My Lawyer in 60 Seconds</a>
 </section>
+
+<style>
+/* Fee comparison matrix styles */
+.fee-matrix-section{background:#fff;border-radius:14px;padding:36px;box-shadow:0 2px 16px rgba(0,0,0,.07);margin:40px 0}
+.fee-matrix-section h2{font-size:1.5rem;font-weight:700;color:#1a1a2e;margin-bottom:6px}
+.fee-matrix-section .section-lead{color:#555;margin-bottom:24px;font-size:.95rem}
+.matrix-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.fee-matrix{width:100%;border-collapse:collapse;font-size:.88rem;min-width:580px}
+.fee-matrix th{background:#1a1a2e;color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+.fee-matrix th:first-child{border-radius:8px 0 0 0}
+.fee-matrix th:last-child{border-radius:0 8px 0 0}
+.fee-matrix tr:nth-child(even) td{background:#f8f9fa}
+.fee-matrix td{padding:10px 14px;border-bottom:1px solid #e8e8e8;vertical-align:top;color:#333}
+.fee-matrix .tier-badge{display:inline-block;border-radius:4px;padding:2px 8px;font-size:.78rem;font-weight:600;margin-right:4px}
+.tier-solo{background:#e8f0fe;color:#1a56db}
+.tier-mid{background:#e3f9e5;color:#1a7b3e}
+.tier-intl{background:#fff3e0;color:#b45309}
+.matrix-note{font-size:.8rem;color:#777;margin-top:12px;font-style:italic}
+/* Speakable / TL;DR */
+.tldr-box{background:linear-gradient(135deg,#CE2939 0%,#8b1e2b 100%);color:#fff;border-radius:12px;padding:24px 28px;margin:32px 0}
+.tldr-box h3{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;opacity:.8}
+.tldr-box p{font-size:.95rem;line-height:1.7;opacity:.95}
+/* Case study */
+.case-study{border-left:4px solid #CE2939;background:#fff8f8;border-radius:0 10px 10px 0;padding:20px 24px;margin:28px 0}
+.case-study .cs-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#CE2939;margin-bottom:8px}
+.case-study h4{font-size:1rem;font-weight:700;color:#1a1a2e;margin-bottom:8px}
+.case-study p{font-size:.88rem;color:#444;margin-bottom:6px}
+.case-study .cs-law{font-size:.78rem;color:#666;font-style:italic}
+/* Tool CTA */
+.tool-cta-box{background:linear-gradient(135deg,#1a1a2e 0%,#2d1b4e 100%);border-radius:12px;padding:24px 28px;margin:32px 0;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.tool-cta-box .cta-icon{font-size:2rem;flex-shrink:0}
+.tool-cta-box h3{color:#fff;font-size:1rem;margin-bottom:4px}
+.tool-cta-box p{color:#ccc;font-size:.88rem}
+.tool-cta-box a.cta-btn{display:inline-block;background:#CE2939;color:#fff;text-decoration:none;border-radius:6px;padding:10px 20px;font-weight:600;font-size:.9rem;margin-top:10px;transition:opacity .2s}
+.tool-cta-box a.cta-btn:hover{opacity:.88}
+</style>
+
+<section class="fee-matrix-section" aria-labelledby="corp-matrix-title" id="fee-comparison">
+  <h2 id="corp-matrix-title">Hungarian Corporate & M&A Lawyer Fee Comparison Matrix 2025</h2>
+  <p class="section-lead">Indicative fee ranges across lawyer tiers for common corporate transactions. Based on Hungarian Bar Association guidance and market data. Figures in HUF including 27% VAT unless noted.</p>
+
+  <div class="matrix-wrap">
+  <table class="fee-matrix" role="table" aria-label="Hungarian corporate lawyer fee comparison">
+    <thead>
+      <tr>
+        <th scope="col">Matter Type</th>
+        <th scope="col"><span class="tier-badge tier-solo">Solo / small firm</span></th>
+        <th scope="col"><span class="tier-badge tier-mid">Mid-size Budapest</span></th>
+        <th scope="col"><span class="tier-badge tier-intl">Top-tier / International</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Kft. formation (basic)</strong></td>
+        <td>HUF 80,000–150,000</td>
+        <td>HUF 150,000–300,000</td>
+        <td>HUF 300,000–600,000</td>
+      </tr>
+      <tr>
+        <td><strong>Kft. formation (complex, foreign shareholder)</strong></td>
+        <td>HUF 200,000–400,000</td>
+        <td>HUF 350,000–700,000</td>
+        <td>HUF 700,000–1,500,000</td>
+      </tr>
+      <tr>
+        <td><strong>Share purchase agreement (SPA) &lt;€500k deal</strong></td>
+        <td>HUF 500,000–1,200,000</td>
+        <td>HUF 1,000,000–2,500,000</td>
+        <td>HUF 2,500,000–6,000,000</td>
+      </tr>
+      <tr>
+        <td><strong>SPA €500k–€5M deal</strong></td>
+        <td>HUF 1,200,000–3,000,000</td>
+        <td>HUF 2,500,000–6,000,000</td>
+        <td>HUF 5,000,000–15,000,000</td>
+      </tr>
+      <tr>
+        <td><strong>M&A transaction &gt;€5M</strong></td>
+        <td>Rarely undertaken</td>
+        <td>HUF 5,000,000–15,000,000</td>
+        <td>HUF 15,000,000–50,000,000+</td>
+      </tr>
+      <tr>
+        <td><strong>Joint venture agreement</strong></td>
+        <td>HUF 400,000–900,000</td>
+        <td>HUF 800,000–2,000,000</td>
+        <td>HUF 2,000,000–6,000,000</td>
+      </tr>
+      <tr>
+        <td><strong>Due diligence report (SME)</strong></td>
+        <td>HUF 600,000–1,500,000</td>
+        <td>HUF 1,200,000–3,000,000</td>
+        <td>HUF 2,500,000–8,000,000</td>
+      </tr>
+      <tr>
+        <td><strong>Restructuring / liquidation</strong></td>
+        <td>HUF 400,000–1,000,000</td>
+        <td>HUF 800,000–2,500,000</td>
+        <td>HUF 2,000,000–7,000,000</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="matrix-note">⚠ A Kft. requires minimum share capital of HUF 3,000,000 under Act V of 2013 (Ptk.) and registration via the Hungarian Company Registry (Cégbíróság). Registration fee: HUF 50,000 (standard) or HUF 15,000 (electronic filing). Stamp duty on the articles of association: HUF 108,000 fixed.</p>
+
+  <div class="tldr-box" itemscope itemtype="https://schema.org/SpeakableSpecification">
+    <h3 itemprop="cssSelector">TL;DR — Quick Answer</h3>
+    <p itemprop="speakable">Forming a basic Hungarian Kft. with a foreign shareholder typically costs HUF 350,000–700,000 in lawyer fees plus HUF 50,000 in registration fees and HUF 3,000,000 minimum share capital. Full setup from instruction to registration takes 8–15 working days.</p>
+  </div>
+
+  <div class="case-study" aria-label="Case study: German GmbH sets up Hungarian subsidiary">
+    <div class="cs-label">📋 Case Study</div>
+    <h4>German GmbH establishes Hungarian Kft. subsidiary</h4>
+    <p><strong>Scenario:</strong> Munich-based software company opening a Budapest development office via a wholly-owned Kft.</p>
+    <p><strong>Share capital:</strong> HUF 5,000,000 (above statutory minimum)</p>
+    <p><strong>Lawyer fee</strong> (mid-size firm, foreign-shareholder Kft.): HUF 450,000</p>
+    <p><strong>Registration fee</strong> (e-filing): HUF 15,000</p>
+    <p><strong>Articles stamp duty:</strong> HUF 108,000</p>
+    <p><strong>Registered office service</strong> (virtual, 12 months): HUF 200,000</p>
+    <p><strong>Translation / notarisation of German GmbH documents:</strong> HUF 120,000</p>
+    <p><strong>Total formation cost</strong> (excl. share capital): HUF 893,000</p>
+    <p class="cs-law">Legal basis: Act V of 2013 (Ptk.) §§ 3:159–3:252 (Kft. rules); Act V of 2006 on Company Registration; Act XCIII of 1990 §§ 40–45 (stamp duty on company formation).</p>
+  </div>
+
+  <div class="tool-cta-box" aria-label="Kft. cost calculator">
+    <div class="cta-icon" aria-hidden="true">🧮</div>
+    <div>
+      <h3>Calculate Kft. formation costs</h3>
+      <p>Use our free calculator to estimate lawyer fees, registration costs, and share capital requirements for your Hungarian company.</p>
+      <a href="/tools/legal-cost-calculator/#kft" class="cta-btn">Open Kft. calculator →</a>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">

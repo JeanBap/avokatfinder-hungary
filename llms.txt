@@ -58,3 +58,4 @@ Allow: /
 - [Szolnok Lawyers](https://hungary.avokatfinder.com/cities/szolnok/) — Find English-speaking lawyers in Szolnok, Hungary
 - [munkajog](https://hungary.avokatfinder.com/glossary/munkajog/) — Hungarian Labour Law (Munkajog) — employment contracts, dismissal rights, and minimum wage for expats
 - [oroklesi-jog](https://hungary.avokatfinder.com/glossary/oroklesi-jog/) — Hungarian Inheritance Law (Öröklési Jog) — succession, wills, forced shares, and estate tax
+- [adatvedelem-hu](https://hungary.avokatfinder.com/glossary/adatvedelem-hu/) — Hungarian GDPR and data protection law (adatvédelem), NAIH enforcement, and compliance requirements

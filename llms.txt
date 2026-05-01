@@ -41,3 +41,9 @@
 ## Permissions
 User-agent: *
 Allow: /
+
+## Tools
+
+- [Hungary Legal Cost Calculator](https://avokatfinder.com/hu/tools/legal-cost-calculator/) — Interactive calculator for property purchase costs, Kft. formation, Golden Visa fees
+- [Hungarian Legal Document Templates](https://avokatfinder.com/hu/tools/nda-template/) — Bilingual NDA, retainer letter, and Bar Association complaint templates
+- [How to Choose a Lawyer in Hungary](https://avokatfinder.com/hu/tools/how-to-choose-a-lawyer/) — Interactive decision tree and checklist for selecting Hungarian legal counsel
